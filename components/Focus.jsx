@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Focus.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const items = [
   { label: 'PRODUCT ENGINEERING', text: 'Building and maintaining SaaS products end-to-end, from architecture to shipped features.' },
@@ -16,16 +13,17 @@ export default function Focus() {
   const sectionRef = useRef(null)
 
   useEffect(() => {
+    const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.focus-headline', {
-        scrollTrigger: { trigger: '.focus-headline', start: 'top 80%' },
-        opacity: 0, y: 30, duration: 0.7, ease: 'power3.out',
-      })
-      gsap.from('.focus-item', {
-        scrollTrigger: { trigger: '.focus-row', start: 'top 80%' },
-        opacity: 0, y: 25, stagger: 0.1, duration: 0.5, ease: 'power2.out',
-      })
-    }, sectionRef)
+      gsap.fromTo(el.querySelector('.focus-headline'),
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.focus-item'),
+        { opacity: 0, y: 25 },
+        { opacity: 1, y: 0, stagger: 0.1, duration: 0.5, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+    }, el)
 
     return () => ctx.revert()
   }, [])

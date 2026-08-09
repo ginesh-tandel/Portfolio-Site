@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Engineering.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const layers = [
   { name: 'PRODUCT', items: 'LogiqLead · LogiqAIAssist · Client Platforms' },
@@ -21,24 +18,25 @@ export default function Engineering() {
   const sectionRef = useRef(null)
 
   useEffect(() => {
+    const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.eng-headline h2', {
-        scrollTrigger: { trigger: '.eng-headline', start: 'top 80%' },
-        opacity: 0, y: 40, stagger: 0.15, duration: 0.8, ease: 'power3.out',
-      })
-      gsap.from('.layer-row', {
-        scrollTrigger: { trigger: '.layer-stack', start: 'top 75%' },
-        opacity: 0, x: -30, stagger: 0.08, duration: 0.5, ease: 'power2.out',
-      })
-      gsap.from('.layer-connector', {
-        scrollTrigger: { trigger: '.layer-stack', start: 'top 75%' },
-        opacity: 0, scaleY: 0, stagger: 0.08, duration: 0.3, transformOrigin: 'top center',
-      })
-      gsap.from('.principles-tags .tag', {
-        scrollTrigger: { trigger: '.principles-tags', start: 'top 90%' },
-        opacity: 0, scale: 0.9, stagger: 0.06, duration: 0.3,
-      })
-    }, sectionRef)
+      gsap.fromTo(el.querySelectorAll('.eng-headline h2'),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.layer-row'),
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, stagger: 0.08, duration: 0.5, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.layer-connector'),
+        { opacity: 0, scaleY: 0 },
+        { opacity: 1, scaleY: 1, stagger: 0.08, duration: 0.3, transformOrigin: 'top center', scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.principles-tags .tag'),
+        { opacity: 0, scale: 0.9 },
+        { opacity: 1, scale: 1, stagger: 0.06, duration: 0.3, scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+    }, el)
 
     return () => ctx.revert()
   }, [])

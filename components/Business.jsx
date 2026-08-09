@@ -1,28 +1,26 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Business.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function Business() {
   const sectionRef = useRef(null)
 
   useEffect(() => {
+    const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.biz-headline h2', {
-        scrollTrigger: { trigger: '.biz-headline', start: 'top 80%' },
-        opacity: 0, y: 40, stagger: 0.15, duration: 0.8, ease: 'power3.out',
-      })
-      gsap.from('.biz-statement', {
-        scrollTrigger: { trigger: '.biz-statement', start: 'top 85%' },
-        opacity: 0, y: 20, duration: 0.6, delay: 0.2,
-      })
-      gsap.from('.biz-concerns', {
-        scrollTrigger: { trigger: '.biz-concerns', start: 'top 90%' },
-        opacity: 0, y: 15, duration: 0.5, delay: 0.3,
-      })
-    }, sectionRef)
+      gsap.fromTo(el.querySelectorAll('.biz-headline h2'),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      )
+      gsap.fromTo(el.querySelector('.biz-statement'),
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelector('.biz-concerns'),
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.5, delay: 0.3, scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+    }, el)
 
     return () => ctx.revert()
   }, [])

@@ -1,29 +1,27 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './CTA.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function CTA() {
   const sectionRef = useRef(null)
   const primaryRef = useRef(null)
 
   useEffect(() => {
+    const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.cta-headline h2', {
-        scrollTrigger: { trigger: '.cta-headline', start: 'top 80%' },
-        opacity: 0, y: 50, stagger: 0.15, duration: 0.9, ease: 'power3.out',
-      })
-      gsap.from('.cta-subtext', {
-        scrollTrigger: { trigger: '.cta-subtext', start: 'top 85%' },
-        opacity: 0, y: 20, duration: 0.6, delay: 0.2,
-      })
-      gsap.from('.cta-buttons', {
-        scrollTrigger: { trigger: '.cta-buttons', start: 'top 90%' },
-        opacity: 0, y: 15, duration: 0.5, delay: 0.35,
-      })
-    }, sectionRef)
+      gsap.fromTo(el.querySelectorAll('.cta-headline h2'),
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, stagger: 0.15, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      )
+      gsap.fromTo(el.querySelector('.cta-subtext'),
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelector('.cta-buttons'),
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.5, delay: 0.35, scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+    }, el)
 
     return () => ctx.revert()
   }, [])
@@ -61,19 +59,21 @@ export default function CTA() {
         Available for selected remote engineering, consulting, and product engagements.
       </p>
       <div className="cta-buttons">
-        <button
+        <a
           ref={primaryRef}
           className="cta-primary magnetic"
-          onClick={() => window.location.href = 'mailto:hello@ginesh.dev'}
+          href="mailto:hello@ginesh.dev"
         >
           START A CONVERSATION →
-        </button>
-        <button
+        </a>
+        <a
           className="cta-secondary"
-          onClick={() => window.open('https://github.com/gineshtandel', '_blank')}
+          href="https://github.com/gineshtandel"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           VIEW GITHUB →
-        </button>
+        </a>
       </div>
     </section>
   )

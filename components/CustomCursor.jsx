@@ -12,6 +12,8 @@ export default function CustomCursor() {
     const dot = cursorDotRef.current
     let mouseX = 0, mouseY = 0
     let cursorX = 0, cursorY = 0
+    let rafId = null
+    let running = true
 
     const onMouseMove = (e) => {
       mouseX = e.clientX
@@ -20,17 +22,18 @@ export default function CustomCursor() {
     }
 
     const animate = () => {
+      if (!running) return
       cursorX += (mouseX - cursorX) * 0.12
       cursorY += (mouseY - cursorY) * 0.12
       cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`
-      requestAnimationFrame(animate)
+      rafId = requestAnimationFrame(animate)
     }
 
     const onMouseEnterInteractive = () => cursor.classList.add('hover')
     const onMouseLeaveInteractive = () => cursor.classList.remove('hover')
 
     document.addEventListener('mousemove', onMouseMove)
-    requestAnimationFrame(animate)
+    rafId = requestAnimationFrame(animate)
 
     const interactiveEls = document.querySelectorAll('a, button, .magnetic')
     interactiveEls.forEach(el => {
@@ -39,6 +42,8 @@ export default function CustomCursor() {
     })
 
     return () => {
+      running = false
+      cancelAnimationFrame(rafId)
       document.removeEventListener('mousemove', onMouseMove)
       interactiveEls.forEach(el => {
         el.removeEventListener('mouseenter', onMouseEnterInteractive)

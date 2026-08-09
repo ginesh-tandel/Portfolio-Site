@@ -9,8 +9,8 @@ export default function Footer() {
       </div>
       <div className="footer-links">
         <a href="mailto:hello@ginesh.dev">EMAIL</a>
-        <a href="https://github.com/gineshtandel" target="_blank" rel="noopener noreferrer">GITHUB</a>
-        <a href="https://linkedin.com/in/gineshtandel" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+        <a href="https://github.com/gineshtandel" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GITHUB</a>
+        <a href="https://linkedin.com/in/gineshtandel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LINKEDIN</a>
       </div>
     </footer>
   )

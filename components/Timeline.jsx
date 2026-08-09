@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Timeline.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const entries = [
   { year: '2015', role: 'Software Developer', desc: 'Started building production line-of-business applications, learning the fundamentals of shipping reliable software.', tech: '.NET · C# · SQL Server' },
@@ -17,16 +14,17 @@ export default function Timeline() {
   const sectionRef = useRef(null)
 
   useEffect(() => {
+    const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.timeline-item-inner', {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
-        opacity: 0, x: -30, stagger: 0.12, duration: 0.6, ease: 'power2.out',
-      })
-      gsap.from('.timeline-final h3', {
-        scrollTrigger: { trigger: '.timeline-final', start: 'top 85%' },
-        opacity: 0, y: 30, stagger: 0.15, duration: 0.7, ease: 'power3.out',
-      })
-    }, sectionRef)
+      gsap.fromTo(el.querySelectorAll('.timeline-item-inner'),
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, stagger: 0.12, duration: 0.6, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.timeline-final h3'),
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, stagger: 0.15, duration: 0.7, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 60%' } }
+      )
+    }, el)
 
     return () => ctx.revert()
   }, [])
@@ -34,7 +32,7 @@ export default function Timeline() {
   return (
     <section className="timeline-scene" id="experience" ref={sectionRef}>
       <div className="scene-label">SCENE 09 — EXPERIENCE</div>
-      <div style={{ height: '36px' }} />
+      <div className="spacer" />
       {entries.map(e => (
         <div key={e.year} className="timeline-item-inner">
           <div className="timeline-year">{e.year}</div>

@@ -55,6 +55,7 @@
   background: none;
   border: none;
   transition: color 0.2s;
+  text-decoration: none;
 }
 .cta-secondary:hover {
   color: var(--accent);

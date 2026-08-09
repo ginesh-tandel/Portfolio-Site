@@ -26,42 +26,16 @@ function Divider() {
   return <div className="divider" />
 }
 
-function useReveal() {
-  useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll(
-      'section, .case-study, .product-mock-ll, .additional-item-inner, .timeline-item-inner, .problem-item, .layer-row, .focus-item, .products-header'
-    ).forEach((el) => {
-      el.classList.add('reveal')
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-}
-
 export default function App() {
   const [coldOpenDone, setColdOpenDone] = useState(false)
-  useReveal()
 
   const handleColdOpenComplete = useCallback(() => {
     setColdOpenDone(true)
   }, [])
 
   useEffect(() => {
+    if (!coldOpenDone) return
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -70,16 +44,18 @@ export default function App() {
 
     lenis.on('scroll', ScrollTrigger.update)
 
-    gsap.ticker.add((time) => {
+    const rafCallback = (time) => {
       lenis.raf(time * 1000)
-    })
+    }
+    gsap.ticker.add(rafCallback)
     gsap.ticker.lagSmoothing(0)
 
     return () => {
+      lenis.off('scroll', ScrollTrigger.update)
       lenis.destroy()
-      gsap.ticker.remove(lenis.raf)
+      gsap.ticker.remove(rafCallback)
     }
-  }, [])
+  }, [coldOpenDone])
 
   useEffect(() => {
     if (!coldOpenDone) {

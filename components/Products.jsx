@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Products.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const logiqLeadTags = ['LEAD MANAGEMENT', 'ENRICHMENT', 'EMAIL SEQUENCES', 'AUTOMATION', 'SMTP/IMAP', 'INBOX', 'ANALYTICS', 'BACKGROUND JOBS', 'COMPLIANCE']
 const logiqAiTags = ['AI INTERACTION', 'KNOWLEDGE RETRIEVAL', 'WORKFLOW AUTOMATION', 'API INTEGRATION', 'REAL-TIME RESPONSES']
@@ -34,16 +31,17 @@ function CaseStudy({ index, name, subtitle, breakdown, tags }) {
   const ref = useRef(null)
 
   useEffect(() => {
+    const el = ref.current
     const ctx = gsap.context(() => {
-      gsap.from(ref.current.querySelectorAll('.breakdown-item'), {
-        scrollTrigger: { trigger: ref.current, start: 'top 75%' },
-        opacity: 0, y: 20, stagger: 0.08, duration: 0.5,
-      })
-      gsap.from(ref.current.querySelectorAll('.project-tag'), {
-        scrollTrigger: { trigger: ref.current, start: 'top 70%' },
-        opacity: 0, scale: 0.9, stagger: 0.04, duration: 0.3,
-      })
-    }, ref)
+      gsap.fromTo(el.querySelectorAll('.breakdown-item'),
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, stagger: 0.08, duration: 0.5, scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.project-tag'),
+        { opacity: 0, scale: 0.9 },
+        { opacity: 1, scale: 1, stagger: 0.04, duration: 0.3, scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+    }, el)
     return () => ctx.revert()
   }, [])
 
@@ -75,12 +73,13 @@ export default function Products() {
   const headerRef = useRef(null)
 
   useEffect(() => {
+    const el = headerRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.products-headline', {
-        scrollTrigger: { trigger: headerRef.current, start: 'top 80%' },
-        opacity: 0, y: 40, duration: 0.8, ease: 'power3.out',
-      })
-    }, headerRef)
+      gsap.fromTo(el.querySelector('.products-headline'),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      )
+    }, el)
     return () => ctx.revert()
   }, [])
 

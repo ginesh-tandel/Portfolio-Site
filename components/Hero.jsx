@@ -1,31 +1,33 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Hero.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
   const heroRef = useRef(null)
 
   useEffect(() => {
+    const el = heroRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.hero-eyebrow', {
-        opacity: 0, y: 20, duration: 0.8, delay: 0.2, ease: 'power2.out',
-      })
-      gsap.from('.hero-headline h1', {
-        opacity: 0, y: 40, duration: 1, stagger: 0.15, delay: 0.4, ease: 'power3.out',
-      })
-      gsap.from('.hero-subtext', {
-        opacity: 0, y: 20, duration: 0.8, delay: 0.9, ease: 'power2.out',
-      })
-      gsap.from('.hero-scroll', {
-        opacity: 0, duration: 0.6, delay: 1.3, ease: 'power2.out',
-      })
+      gsap.fromTo('.hero-eyebrow',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: 'power2.out' }
+      )
+      gsap.fromTo('.hero-headline h1',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 1, stagger: 0.15, delay: 0.4, ease: 'power3.out' }
+      )
+      gsap.fromTo('.hero-subtext',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.9, ease: 'power2.out' }
+      )
+      gsap.fromTo('.hero-scroll',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.6, delay: 1.3, ease: 'power2.out' }
+      )
 
       gsap.to('.hero-headline h1', {
         scrollTrigger: {
-          trigger: heroRef.current,
+          trigger: el,
           start: 'top top',
           end: 'bottom top',
           scrub: 1,
@@ -34,7 +36,7 @@ export default function Hero() {
         opacity: 0.3,
         scale: 0.97,
       })
-    }, heroRef)
+    }, el)
 
     return () => ctx.revert()
   }, [])

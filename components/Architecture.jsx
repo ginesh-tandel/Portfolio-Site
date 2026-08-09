@@ -1,9 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Architecture.css'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const nodes = ['Frontend', 'API', 'Application', 'Domain', 'Infrastructure', 'Database']
 const tags = ['AUTHENTICATION', 'CACHING', 'BACKGROUND JOBS', 'INTEGRATIONS', 'MESSAGING', 'MONITORING']
@@ -12,55 +9,33 @@ export default function Architecture() {
   const sectionRef = useRef(null)
 
   useEffect(() => {
+    const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.from('.arch-headline h2', {
-        scrollTrigger: {
-          trigger: '.arch-headline',
-          start: 'top 80%',
-        },
-        opacity: 0, y: 40, duration: 0.8, stagger: 0.15, ease: 'power3.out',
-      })
-
-      gsap.from('.arch-statement', {
-        scrollTrigger: {
-          trigger: '.arch-statement',
-          start: 'top 85%',
-        },
-        opacity: 0, y: 20, duration: 0.6, delay: 0.3,
-      })
-
-      gsap.from('.arch-svg-container', {
-        scrollTrigger: {
-          trigger: '.arch-svg-container',
-          start: 'top 80%',
-        },
-        opacity: 0, duration: 1,
-      })
-
-      gsap.from('.arch-node-group', {
-        scrollTrigger: {
-          trigger: '.arch-svg-container',
-          start: 'top 75%',
-        },
-        opacity: 0, y: 15, stagger: 0.1, duration: 0.5, ease: 'power2.out',
-      })
-
-      gsap.from('.arch-line', {
-        scrollTrigger: {
-          trigger: '.arch-svg-container',
-          start: 'top 75%',
-        },
-        scaleX: 0, stagger: 0.08, duration: 0.4, ease: 'power2.out', transformOrigin: 'left center',
-      })
-
-      gsap.from('.arch-tag', {
-        scrollTrigger: {
-          trigger: '.cross-tags',
-          start: 'top 85%',
-        },
-        opacity: 0, y: 10, stagger: 0.06, duration: 0.4,
-      })
-    }, sectionRef)
+      gsap.fromTo(el.querySelectorAll('.arch-headline h2'),
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      )
+      gsap.fromTo(el.querySelector('.arch-statement'),
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelector('.arch-svg-container'),
+        { opacity: 0 },
+        { opacity: 1, duration: 1, scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.arch-node-group'),
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, stagger: 0.1, duration: 0.5, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.arch-line'),
+        { scaleX: 0 },
+        { scaleX: 1, stagger: 0.08, duration: 0.4, ease: 'power2.out', transformOrigin: 'left center', scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.arch-tag'),
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, stagger: 0.06, duration: 0.4, scrollTrigger: { trigger: el, start: 'top 65%' } }
+      )
+    }, el)
 
     return () => ctx.revert()
   }, [])
@@ -77,7 +52,7 @@ export default function Architecture() {
       </p>
 
       <div className="arch-svg-container">
-        <svg className="arch-svg" viewBox="0 0 900 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="arch-svg" viewBox="0 0 900 120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System architecture diagram">
           {nodes.map((node, i) => {
             const x = i * 155 + 10
             return (

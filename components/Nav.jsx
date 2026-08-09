@@ -36,7 +36,7 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="nav">
+      <nav className="nav" aria-label="Main navigation">
         <div className="nav-logo">GINESH</div>
         <div className="nav-links">
           {navItems.map(item => (
