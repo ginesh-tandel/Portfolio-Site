@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import { techStack } from "../data/content";
 import RevealText from "../components/RevealText";
 
@@ -7,6 +7,14 @@ export default function TechDepth() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".tech-layer", { opacity: 1, x: 0 });
+        gsap.set(".tech-connector", { scaleY: 1 });
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".tech-layer", {
         scrollTrigger: {

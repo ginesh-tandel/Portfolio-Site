@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import { siteData } from "../data/content";
 
 export default function ColdOpen() {
@@ -8,10 +8,17 @@ export default function ColdOpen() {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.5 });
+    if (prefersReducedMotion()) {
+      gsap.set(initLinesRef.current, { opacity: 0, display: "none" });
+      gsap.set(heroRef.current, { opacity: 1 });
+      gsap.set(".hero-line, .hero-sub, .hero-cta", { opacity: 1, y: 0 });
+      return;
+    }
 
     const initLines = initLinesRef.current?.querySelectorAll(".init-line");
     if (!initLines) return;
+
+    const tl = gsap.timeline({ delay: 0.5 });
 
     tl.to(initLines[0], { opacity: 1, duration: 0.3 })
       .to(initLines[1], { opacity: 1, duration: 0.3 }, "+=0.3")
@@ -62,6 +69,10 @@ export default function ColdOpen() {
         },
         "-=0.3"
       );
+
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   return (

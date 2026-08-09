@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import { experience } from "../data/content";
 import RevealText from "../components/RevealText";
 
@@ -7,6 +7,14 @@ export default function ExperienceTimeline() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".timeline-entry", { opacity: 1, x: 0 });
+        gsap.set(".timeline-line-fill", { scaleY: 1 });
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".timeline-entry", {
         scrollTrigger: {

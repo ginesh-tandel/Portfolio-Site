@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import { problems } from "../data/content";
 import RevealText from "../components/RevealText";
 
@@ -7,6 +7,13 @@ export default function ProblemSolving() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".problem-item", { opacity: 1, y: 0 });
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".problem-item", {
         scrollTrigger: {

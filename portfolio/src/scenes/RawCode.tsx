@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap, ScrollTrigger } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import RevealText from "../components/RevealText";
 
 const codeFragments = [
@@ -41,6 +41,14 @@ export default function RawCode() {
   const codeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".code-fragment", { opacity: 1, y: 0 });
+        gsap.set(".code-line-highlight", { scaleX: 1 });
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".code-fragment", {
         scrollTrigger: {
@@ -63,13 +71,6 @@ export default function RawCode() {
         },
         scaleX: 0,
         transformOrigin: "left",
-      });
-
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top center",
-        end: "bottom center",
-        onLeave: () => {},
       });
     }, sectionRef);
 

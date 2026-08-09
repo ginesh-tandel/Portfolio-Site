@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import RevealText from "../components/RevealText";
 
 const nodes = [
@@ -27,6 +27,14 @@ export default function Architecture() {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".arch-node", { scale: 1, opacity: 1 });
+        gsap.set(".arch-line", { strokeDashoffset: 0, opacity: 1 });
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".arch-node", {
         scrollTrigger: {

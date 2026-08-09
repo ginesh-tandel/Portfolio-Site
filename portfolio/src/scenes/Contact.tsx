@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import { siteData, socialLinks } from "../data/content";
 import MagneticButton from "../components/MagneticButton";
 import RevealText from "../components/RevealText";
@@ -8,6 +8,13 @@ export default function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".cta-element", { opacity: 1, y: 0 });
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".cta-element", {
         scrollTrigger: {

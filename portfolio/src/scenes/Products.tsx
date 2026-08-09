@@ -1,12 +1,20 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "../lib/gsap";
+import { gsap, prefersReducedMotion } from "../lib/gsap";
 import { projects, type Project } from "../data/content";
 import RevealText from "../components/RevealText";
+import ProjectVisual from "../components/ProjectVisual";
 
 function CaseStudy({ project }: { project: Project }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      const ctx = gsap.context(() => {
+        gsap.set(".cs-phase", { opacity: 1, y: 0 });
+      }, ref);
+      return () => ctx.revert();
+    }
+
     const ctx = gsap.context(() => {
       gsap.from(".cs-phase", {
         scrollTrigger: {
@@ -41,7 +49,9 @@ function CaseStudy({ project }: { project: Project }) {
           </span>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <ProjectVisual project={project} large={project.number === "01" || project.number === "02"} />
+
+        <div className="grid md:grid-cols-2 gap-12 mt-12">
           <div className="space-y-8">
             <div className="cs-phase">
               <span className="text-xs font-mono text-accent tracking-wider">

@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { gsap } from "../lib/gsap";
 import { ScrollTrigger } from "../lib/gsap";
+import { prefersReducedMotion } from "../lib/gsap";
 
 interface RevealTextProps {
   children: ReactNode;
@@ -20,6 +21,11 @@ export default function RevealText({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    if (prefersReducedMotion()) {
+      gsap.set(el, { opacity: 1, y: 0 });
+      return;
+    }
 
     gsap.set(el, { opacity: 0, y: 40 });
 

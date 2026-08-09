@@ -41,7 +41,7 @@ export default function Navbar() {
     }
   }, [menuOpen]);
 
-  const totalScenes = 10;
+  const totalScenes = 11;
 
   return (
     <>
