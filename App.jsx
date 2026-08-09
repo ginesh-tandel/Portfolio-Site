@@ -22,14 +22,23 @@ import './styles/global.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  // Collapses every fromTo/to entrance animation's duration/delay/stagger
+  // to near-zero so content still appears, just without the motion.
+  gsap.globalTimeline.timeScale(100)
+}
+
 function Divider() {
   return <div className="divider" />
 }
 
+const COLD_OPEN_KEY = 'cold-open-seen'
+
 export default function App() {
-  const [coldOpenDone, setColdOpenDone] = useState(false)
+  const [coldOpenDone, setColdOpenDone] = useState(() => sessionStorage.getItem(COLD_OPEN_KEY) === '1')
 
   const handleColdOpenComplete = useCallback(() => {
+    sessionStorage.setItem(COLD_OPEN_KEY, '1')
     setColdOpenDone(true)
   }, [])
 

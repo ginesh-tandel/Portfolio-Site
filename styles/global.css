@@ -28,7 +28,7 @@ a{color:inherit;text-decoration:none}
 }
 
 /* Headlines always visible by default — GSAP animates FROM hidden */
-.hero-headline h1,
+.hero-headline .hero-line,
 .arch-headline h2,
 .biz-headline h2,
 .eng-headline h2,
@@ -75,7 +75,7 @@ a{color:inherit;text-decoration:none}
 
 /* Responsive */
 @media(max-width:1024px){
-  .hero-headline h1{font-size:64px!important}
+  .hero-headline .hero-line{font-size:64px!important}
   .cta-headline h2{font-size:64px!important}
   .arch-headline h2{font-size:48px!important}
   .biz-headline h2{font-size:48px!important}
@@ -90,7 +90,7 @@ a{color:inherit;text-decoration:none}
   section,.hero,.nav,.footer,.code-teaser,.arch-scene,.system-scene,.products-header,.case-study,.additional-work,.eng-scene,.problem-scene,.biz-scene,.timeline-scene,.focus-scene,.cta-scene{padding-left:24px!important;padding-right:24px!important}
   .nav{padding:20px 24px!important}
   .nav-links{gap:20px}
-  .hero-headline h1{font-size:40px!important}
+  .hero-headline .hero-line{font-size:40px!important}
   .cta-headline h2{font-size:40px!important}
   .arch-headline h2,.biz-headline h2{font-size:36px!important}
   .eng-headline h2{font-size:28px!important}

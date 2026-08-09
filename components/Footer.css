@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 48px 56px;
+  padding-right: 120px; /* clears the fixed .go-top button (right:36px, width:48px) */
 }
 .footer-left {
   display: flex;

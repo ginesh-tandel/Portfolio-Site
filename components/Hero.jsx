@@ -12,7 +12,7 @@ export default function Hero() {
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: 'power2.out' }
       )
-      gsap.fromTo('.hero-headline h1',
+      gsap.fromTo('.hero-headline .hero-line',
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 1, stagger: 0.15, delay: 0.4, ease: 'power3.out' }
       )
@@ -25,7 +25,7 @@ export default function Hero() {
         { opacity: 1, duration: 0.6, delay: 1.3, ease: 'power2.out' }
       )
 
-      gsap.to('.hero-headline h1', {
+      gsap.to('.hero-headline .hero-line', {
         scrollTrigger: {
           trigger: el,
           start: 'top top',
@@ -44,10 +44,10 @@ export default function Hero() {
   return (
     <section className="hero" id="home" ref={heroRef}>
       <div className="hero-eyebrow">SENIOR .NET ENGINEER · SOFTWARE ARCHITECT · SAAS BUILDER</div>
-      <div className="hero-headline">
-        <h1>I TURN COMPLEX IDEAS</h1>
-        <h1>INTO WORKING SOFTWARE.</h1>
-      </div>
+      <h1 className="hero-headline">
+        <span className="hero-line">I TURN COMPLEX IDEAS</span>
+        <span className="hero-line">INTO WORKING SOFTWARE.</span>
+      </h1>
       <p className="hero-subtext">
         11+ years shipping production systems — from legacy modernization to SaaS products used by real businesses.
       </p>

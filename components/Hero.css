@@ -17,7 +17,8 @@
   flex-direction: column;
   gap: 4px;
 }
-.hero-headline h1 {
+.hero-headline .hero-line {
+  display: block;
   font-family: var(--font-display);
   font-size: 96px;
   font-weight: 700;

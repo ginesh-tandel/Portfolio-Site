@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 .cold-open.fade-out {

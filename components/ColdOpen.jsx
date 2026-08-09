@@ -28,8 +28,13 @@ export default function ColdOpen({ onComplete }) {
     return () => clearInterval(interval)
   }, [onComplete])
 
+  const skip = () => {
+    setDone(true)
+    onComplete()
+  }
+
   return (
-    <div className={`cold-open ${done ? 'fade-out' : ''}`}>
+    <div className={`cold-open ${done ? 'fade-out' : ''}`} onClick={skip} title="Click to skip">
       <div className="cold-open-terminal">
         {visibleLines.map((line, i) => (
           <div key={i} className="cold-open-line">
