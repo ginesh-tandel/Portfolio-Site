@@ -1,0 +1,46 @@
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0B0D10;--surface:#12151A;--border:#22262C;
+  --text-primary:#F5F6F7;--text-muted:#8A8F98;--text-code:#C9D1D9;--text-comment:#6B7280;
+  --accent:#5EEAD4;
+  --font-display:'Space Grotesk',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+  --font-body:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text-primary);font-family:var(--font-body);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+.page{max-width:1440px;margin:0 auto}
+
+.divider{width:100%;height:1px;background:var(--border)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:1024px){
+  .hero-headline h1{font-size:56px!important}
+  .cta-headline h2{font-size:56px!important}
+  .arch-headline h2,.biz-headline h2{font-size:44px!important}
+  .code-teaser-inner{flex-direction:column!important;gap:40px!important}
+  .code-card{width:100%!important}
+  .breakdown-grid{flex-direction:column!important}
+  .focus-row{flex-direction:column!important}
+  .additional-item-inner{flex-direction:column!important;align-items:flex-start!important;gap:8px!important}
+}
+@media(max-width:768px){
+  section,.hero,.nav,.footer,.code-teaser,.arch-scene,.system-scene,.products-header,.case-study,.additional-work,.eng-scene,.problem-scene,.biz-scene,.timeline-scene,.focus-scene,.cta-scene{padding-left:24px!important;padding-right:24px!important}
+  .nav{padding:20px 24px!important}
+  .nav-links{gap:20px}
+  .hero-headline h1{font-size:40px!important}
+  .cta-headline h2{font-size:40px!important}
+  .arch-headline h2,.biz-headline h2{font-size:32px!important}
+  .diagram-row-inner{flex-wrap:wrap;gap:8px}
+  .diagram-connector{display:none}
+  .stats-row-inner{flex-direction:column}
+  .timeline-item-inner{flex-direction:column;gap:12px}
+  .timeline-year{width:auto!important}
+  .footer-inner{flex-direction:column;gap:20px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}

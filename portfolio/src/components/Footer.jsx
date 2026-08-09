@@ -1,0 +1,17 @@
+import './Footer.css'
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-left">
+        <div className="footer-name">Ginesh Tandel</div>
+        <div className="footer-title">Senior .NET Full-Stack Engineer</div>
+      </div>
+      <div className="footer-links">
+        <a href="mailto:hello@ginesh.dev">EMAIL</a>
+        <a href="https://github.com/gineshtandel" target="_blank" rel="noopener noreferrer">GITHUB</a>
+        <a href="https://linkedin.com/in/gineshtandel" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+      </div>
+    </footer>
+  )
+}

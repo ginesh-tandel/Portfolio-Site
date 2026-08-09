@@ -1,0 +1,7 @@
+.problem-scene{padding:100px 56px;display:flex;flex-direction:column}
+.problem-item{display:flex;flex-direction:column;gap:8px;padding:26px 0;border-bottom:1px solid var(--border)}
+.problem-statement{font-family:var(--font-display);font-size:38px;font-weight:600;letter-spacing:-1px;color:var(--text-primary)}
+.problem-flow{font-family:var(--font-mono);font-size:11px;letter-spacing:.5px;color:var(--text-muted)}
+.problem-final{display:flex;flex-direction:column;gap:2px;padding-top:40px}
+.problem-final h3{font-family:var(--font-display);font-size:44px;font-weight:600;letter-spacing:-1px;color:var(--text-primary)}
+.problem-final .accent{color:var(--accent)}

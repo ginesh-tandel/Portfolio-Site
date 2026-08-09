@@ -1,0 +1,9 @@
+.arch-scene{padding:100px 56px;display:flex;flex-direction:column;gap:36px}
+.arch-headline{display:flex;flex-direction:column;gap:2px}
+.arch-headline h2{font-family:var(--font-display);font-size:60px;font-weight:600;letter-spacing:-1px;line-height:1.05;color:var(--text-primary)}
+.arch-statement{font-family:var(--font-body);font-size:17px;line-height:1.5;color:var(--text-muted);max-width:640px}
+.diagram-row-inner{display:flex;align-items:center;width:100%;gap:0}
+.diagram-node{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:12px 18px;font-family:var(--font-mono);font-size:13px;color:var(--text-primary);white-space:nowrap}
+.diagram-connector{flex:1;height:1px;background:var(--border)}
+.cross-tags{display:flex;gap:12px;flex-wrap:wrap}
+.tag{border:1px solid var(--border);border-radius:20px;padding:8px 14px;font-family:var(--font-mono);font-size:11px;letter-spacing:.5px;color:var(--text-muted)}
