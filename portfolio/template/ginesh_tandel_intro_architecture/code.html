@@ -1,0 +1,227 @@
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;background-color:#0a0a0a;}body{overscroll-behavior:none;background-image:linear-gradient(to right,rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary":"#adc6ff","bg-secondary":"#111111","text-secondary":"#a0a0a0","on-tertiary-container":"#005034","surface":"#131313","primary-fixed-dim":"#d7baff","secondary-fixed":"#d8e2ff","background":"#131313","on-tertiary":"#003823","on-surface-variant":"#ccc3d2","on-primary-container":"#553387","on-secondary-fixed-variant":"#004395","on-primary":"#3f1a70","surface-bright":"#3a3939","primary-container":"#c8a2ff","accent-amber":"#ffad66","error-container":"#93000a","primary":"#dec4ff","inverse-on-surface":"#313030","on-tertiary-fixed-variant":"#005235","error":"#ffb4ab","outline-variant":"#4a4450","tertiary-fixed-dim":"#7cd9a9","surface-container":"#201f1f","tertiary":"#84e1b1","on-background":"#e5e2e1","text-primary":"#f0f0f0","tertiary-fixed":"#98f6c4","on-primary-fixed":"#280056","tertiary-container":"#68c597","surface-container-lowest":"#0e0e0e","secondary-fixed-dim":"#adc6ff","surface-container-highest":"#353534","inverse-surface":"#e5e2e1","on-error-container":"#ffdad6","secondary-container":"#0566d9","surface-container-high":"#2a2a2a","surface-dim":"#131313","bg-elevated":"#161616","primary-fixed":"#eddcff","outline":"#958e9b","on-secondary-container":"#e6ecff","border-high":"#2a2a2a","text-muted":"#555555","code-bg":"#0d0d0d","border-low":"#1e1e1e","surface-container-low":"#1c1b1b","on-surface":"#e5e2e1","on-tertiary-fixed":"#002113","surface-variant":"#353534","on-secondary":"#002e6a","surface-tint":"#d7baff","on-error":"#690005","on-primary-fixed-variant":"#573488","inverse-primary":"#6f4ca2","on-secondary-fixed":"#001a42"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"max-width-main":"1152px","gutter":"24px","section-gap":"128px","max-width-editorial":"768px","unit":"4px"},"fontFamily":{"headline-editorial":["Geist"],"body-base":["Geist"],"label-caps":["JetBrains Mono"],"display-lg-mobile":["Geist"],"display-lg":["Geist"],"code-snippet":["JetBrains Mono"]},"fontSize":{"headline-editorial":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],"body-base":["16px",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"1.0","letterSpacing":"0.1em","fontWeight":"500"}],"display-lg-mobile":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],"display-lg":["96px",{"lineHeight":"1.05","letterSpacing":"-0.025em","fontWeight":"700"}],"code-snippet":["14px",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}]}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-[#0a0a0a] font-body-base text-on-surface selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 mix-blend-difference"><div class="h-20 w-full px-gutter flex items-center justify-between border-b border-white/5 backdrop-blur-sm"><a class="font-label-caps text-label-caps tracking-[0.2em] uppercase text-on-surface" data-path="home" href="#">Ginesh</a><nav class="flex items-center gap-12" data-active-classes="text-primary"><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-500" data-path="work" href="#">Work</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-500" data-path="experience" href="#">Experience</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-500" data-path="about" href="#">About</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors duration-500" data-path="contact" href="#">Contact</a></nav></div></header><div class="fixed bottom-gutter right-gutter z-50"><div class="flex flex-col items-end gap-2"><span class="font-label-caps text-label-caps text-on-surface tracking-widest">01 / 10</span><div class="h-[1px] w-12 bg-white/10"></div></div></div><main class="relative w-full pt-20"><div class="flex flex-col w-full">
+<!-- GSAP & ScrollTrigger Setup -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<!-- Sequence Container for Pinning -->
+<div class="relative w-full" id="intro-sequence">
+<!-- SCENE 01: Cold Open -->
+<section class="min-h-screen w-full flex flex-col justify-center px-gutter pt-[128px] pb-[128px] relative z-10" id="scene-01">
+<div class="max-w-max-width-main mx-auto w-full relative">
+<!-- Initialization Sequence -->
+<div class="absolute top-0 left-0 flex flex-col gap-2 font-code-snippet text-code-snippet text-text-secondary opacity-0" id="init-text">
+<span>> system.initialize()</span>
+<span>> loading core architecture...</span>
+<span>> mounting dependencies...</span>
+<span>> establishing connection...</span>
+<span class="text-primary">> status: ready.</span>
+</div>
+<!-- Hero Content -->
+<div class="flex flex-col gap-8 opacity-0 translate-y-8 mt-32" id="hero-content">
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-[900px] uppercase mix-blend-difference">
+                        I turn complex ideas into working software.
+                    </h1>
+<div class="flex flex-col md:flex-row md:items-center gap-6">
+<p class="font-body-base text-body-base text-text-secondary max-w-[400px]">
+                            Senior .NET Full Stack Engineer · Software Architect · SaaS Builder
+                        </p>
+<div class="h-px w-16 bg-surface-container-high hidden md:block"></div>
+<p class="font-label-caps text-label-caps text-primary tracking-widest uppercase flex items-center gap-2">
+                            Scroll to build <span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Ambient Background Element -->
+<div class="absolute inset-0 z-[-1] pointer-events-none opacity-20 bg-gradient-to-br from-primary/5 via-transparent to-bg-elevated/20"></div>
+</section>
+<!-- SCENE 02: Raw Code -->
+<section class="min-h-screen w-full flex flex-col justify-center px-gutter pt-[128px] pb-[128px] relative z-20 bg-surface" id="scene-02">
+<div class="max-w-max-width-main mx-auto w-full flex flex-col gap-section-gap">
+<div class="flex flex-col gap-4 max-w-max-width-editorial code-headline opacity-0 translate-y-8">
+<h2 class="font-headline-editorial text-headline-editorial text-on-surface">
+                        Code is only the beginning.
+                    </h2>
+<p class="font-body-base text-body-base text-text-secondary">
+                        Writing code is the baseline. The true craft lies in assembling these fragments into robust, scalable systems that solve actual business problems.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative h-[400px]">
+<!-- Code Fragment 1 -->
+<div class="code-fragment md:col-span-4 bg-bg-elevated shadow-xl p-6 rounded-lg opacity-0 translate-y-12 z-30 absolute top-0 left-0 w-full md:w-[350px]">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<span class="ml-auto font-label-caps text-label-caps text-text-muted">Domain.cs</span>
+</div>
+<pre class="font-code-snippet text-code-snippet text-on-surface-variant overflow-hidden"><code class="text-primary">public async Task<Product> BuildAsync() {</code>
+<code class="text-text-secondary">  var dependencies = await _registry.Resolve();</code>
+<code class="text-text-secondary">  return new Architecture(dependencies);</code>
+<code>}</code></pre>
+</div>
+<!-- Code Fragment 2 -->
+<div class="code-fragment md:col-span-5 bg-bg-elevated shadow-xl p-6 rounded-lg opacity-0 translate-y-12 z-20 absolute top-20 left-[10%] md:left-[30%] w-full md:w-[450px]">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<span class="ml-auto font-label-caps text-label-caps text-text-muted">Infrastructure.cs</span>
+</div>
+<pre class="font-code-snippet text-code-snippet text-on-surface-variant overflow-hidden"><code class="text-tertiary">services.AddInfrastructure(cfg => {</code>
+<code class="text-text-secondary">  cfg.UsePostgres(connString)</code>
+<code class="text-text-secondary">     .AddDistributedCache()</code>
+<code class="text-text-secondary">     .AddMessageBus();</code>
+<code>});</code></pre>
+</div>
+<!-- Code Fragment 3 -->
+<div class="code-fragment md:col-span-4 bg-bg-elevated shadow-xl p-6 rounded-lg opacity-0 translate-y-12 z-40 absolute top-40 right-0 w-full md:w-[320px]">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>
+<span class="ml-auto font-label-caps text-label-caps text-text-muted">Api.cs</span>
+</div>
+<pre class="font-code-snippet text-code-snippet text-on-surface-variant overflow-hidden"><code class="text-secondary">app.MapGet("/api/v1/system",</code>
+<code class="text-text-secondary">  async (ISystemService sys) =></code>
+<code class="text-text-secondary">  await sys.GetStatus());</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- SCENE 03: Architecture -->
+<section class="min-h-screen w-full flex flex-col justify-center px-gutter pt-[128px] pb-[128px] relative z-30 bg-bg-secondary" id="scene-03">
+<div class="max-w-max-width-main mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-section-gap items-center">
+<div class="lg:col-span-5 flex flex-col gap-6 arch-text opacity-0 -translate-x-8">
+<h2 class="font-headline-editorial text-headline-editorial text-on-surface">
+                        11+ Years of Engineering.
+                    </h2>
+<p class="font-body-base text-body-base text-text-secondary">
+                        Architecture isn't about adding complexity. It's about making complexity manageable. Transforming isolated fragments of code into a cohesive, performant, and reliable product engine.
+                    </p>
+</div>
+<div class="lg:col-span-7 relative h-[500px] w-full arch-diagram">
+<!-- Nodes -->
+<div class="absolute top-[20%] left-[10%] arch-node opacity-0 scale-50 flex flex-col items-center gap-2">
+<div class="w-12 h-12 bg-primary rounded-full shadow-lg shadow-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">web</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-primary">Frontend</span>
+</div>
+<div class="absolute top-[50%] left-[35%] -translate-y-1/2 arch-node opacity-0 scale-50 flex flex-col items-center gap-2 z-10">
+<div class="w-16 h-16 bg-secondary rounded-full shadow-lg shadow-secondary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary">api</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-primary">API Gateway</span>
+</div>
+<div class="absolute top-[20%] right-[30%] arch-node opacity-0 scale-50 flex flex-col items-center gap-2">
+<div class="w-12 h-12 bg-tertiary rounded-full shadow-lg shadow-tertiary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary">schema</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-primary">Domain</span>
+</div>
+<div class="absolute bottom-[20%] right-[30%] arch-node opacity-0 scale-50 flex flex-col items-center gap-2">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">dns</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-primary">Infrastructure</span>
+</div>
+<div class="absolute top-[50%] right-[5%] -translate-y-1/2 arch-node opacity-0 scale-50 flex flex-col items-center gap-2 z-10">
+<div class="w-16 h-16 bg-accent-amber rounded-full shadow-lg shadow-accent-amber/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">database</span>
+</div>
+<span class="font-label-caps text-label-caps text-text-primary">Database</span>
+</div>
+<!-- SVG Connections -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" overflow="visible">
+<path class="arch-line" d="M 15% 25% L 35% 50%" fill="none" stroke="#2a2a2a" stroke-dasharray="6,6" stroke-width="2"></path>
+<path class="arch-line" d="M 35% 50% L 65% 25%" fill="none" stroke="#2a2a2a" stroke-dasharray="6,6" stroke-width="2"></path>
+<path class="arch-line" d="M 35% 50% L 65% 80%" fill="none" stroke="#2a2a2a" stroke-dasharray="6,6" stroke-width="2"></path>
+<path class="arch-line" d="M 65% 25% L 90% 50%" fill="none" stroke="#2a2a2a" stroke-dasharray="6,6" stroke-width="2"></path>
+<path class="arch-line" d="M 65% 80% L 90% 50%" fill="none" stroke="#2a2a2a" stroke-dasharray="6,6" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</section>
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Scene 01: Initial Load Sequence
+            const tlInit = gsap.timeline();
+            
+            tlInit.to("#init-text span", {
+                opacity: 1,
+                y: 0,
+                duration: 0.2,
+                stagger: 0.15,
+                ease: "power2.out"
+            })
+            .to("#init-text", {
+                opacity: 0,
+                duration: 0.5,
+                delay: 0.8,
+                ease: "power2.inOut"
+            })
+            .to("#hero-content", {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "expo.out"
+            }, "-=0.2");
+
+            // Scene 02: Code Fragments revealing on scroll
+            const codeTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#scene-02",
+                    start: "top 70%",
+                    end: "center center",
+                    scrub: 1
+                }
+            });
+
+            codeTl.to(".code-headline", { opacity: 1, y: 0, duration: 1 })
+                  .to(".code-fragment", { 
+                      opacity: 1, 
+                      y: 0, 
+                      stagger: 0.2, 
+                      duration: 1 
+                  }, "-=0.5");
+
+            // Scene 03: Architecture Nodes and Lines
+            // Prepare SVG lines for drawing
+            const paths = document.querySelectorAll('.arch-line');
+            paths.forEach(path => {
+                const length = path.getTotalLength();
+                path.style.strokeDasharray = `${length}`;
+                path.style.strokeDashoffset = length;
+            });
+
+            const archTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#scene-03",
+                    start: "top 60%",
+                    end: "center center",
+                    scrub: 1
+                }
+            });
+
+            archTl.to(".arch-text", { opacity: 1, x: 0, duration: 1 })
+                  .to(".arch-node", { 
+                      opacity: 1, 
+                      scale: 1, 
+                      stagger: 0.1, 
+                      ease: "back.out(1.7)",
+                      duration: 1 
+                  }, "-=0.5")
+                  .to(".arch-line", {
+                      strokeDashoffset: 0,
+                      duration: 1.5,
+                      stagger: 0.1,
+                      ease: "power1.inOut"
+                  }, "-=0.8");
+        });
+    </script>
+</div></main></body></html>

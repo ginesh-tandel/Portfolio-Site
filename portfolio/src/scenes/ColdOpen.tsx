@@ -85,18 +85,23 @@ export default function ColdOpen() {
         ref={initLinesRef}
         className="absolute inset-0 flex flex-col items-center justify-center gap-3 font-mono text-sm text-text-muted"
       >
-        <div className="init-line opacity-0">initializing...</div>
-        <div className="init-line opacity-0">loading experience</div>
-        <div className="init-line opacity-0">loading architecture</div>
+        <div className="init-line opacity-0">&gt; system.initialize()</div>
+        <div className="init-line opacity-0">&gt; loading experience...</div>
+        <div className="init-line opacity-0">&gt; loading architecture...</div>
         <div className="init-line opacity-0">
-          loading {siteData.yearsExperience}+ years of engineering
+          &gt; loading {siteData.yearsExperience} years of engineering...
         </div>
         <div className="init-line opacity-0 w-2 h-4 bg-text-muted/50 animate-pulse mt-2" />
       </div>
 
       <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 pointer-events-none opacity-60 bg-gradient-to-br from-accent/[0.06] via-transparent to-bg-elevated/30"
+      />
+
+      <div
         ref={heroRef}
-        className="opacity-0 text-center px-6 max-w-5xl mx-auto"
+        className="relative opacity-0 text-center px-6 max-w-5xl mx-auto"
       >
         <h1 className="mb-8">
           {siteData.heroStatement.map((line, i) => (

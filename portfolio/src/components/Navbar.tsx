@@ -71,9 +71,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <span className="text-xs font-mono text-text-muted ml-4">
-              {String(sceneIndex).padStart(2, "0")} / {String(totalScenes).padStart(2, "0")}
-            </span>
           </div>
 
           <button
@@ -116,6 +113,13 @@ export default function Navbar() {
           </span>
         </div>
       )}
+
+      <div className="fixed bottom-6 right-6 z-50 hidden md:flex flex-col items-end gap-2">
+        <span className="text-xs font-mono tracking-widest text-text-secondary">
+          {String(sceneIndex).padStart(2, "0")} / {String(totalScenes).padStart(2, "0")}
+        </span>
+        <div className="h-px w-12 bg-border-light" />
+      </div>
     </>
   );
 }

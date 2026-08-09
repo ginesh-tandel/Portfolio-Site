@@ -60,49 +60,64 @@ export default function Contact() {
         <div className="cta-element flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
           <MagneticButton
             href={`mailto:${socialLinks.email}`}
-            className="text-sm tracking-widest uppercase text-bg-primary bg-text-primary px-8 py-4 rounded-none hover:bg-accent transition-colors duration-300"
+            className="group relative overflow-hidden text-sm tracking-widest uppercase text-bg-primary bg-text-primary px-8 py-4"
           >
-            START A CONVERSATION →
+            <span className="relative z-10 flex items-center gap-2 group-hover:text-bg-primary transition-colors duration-300">
+              Start a conversation
+              <span className="font-icon transition-transform duration-300 group-hover:translate-x-1" style={{ fontSize: 16 }}>
+                arrow_forward
+              </span>
+            </span>
+            <span className="absolute inset-0 bg-accent translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
           </MagneticButton>
 
           <MagneticButton
             href={socialLinks.github}
-            className="text-sm tracking-widest uppercase text-text-muted border border-border-light px-8 py-4 rounded-none hover:text-text-primary hover:border-text-primary transition-colors duration-300"
+            className="text-sm tracking-widest uppercase text-text-muted border border-border-light px-8 py-4 hover:text-text-primary hover:border-text-primary transition-colors duration-300"
           >
-            VIEW GITHUB →
+            <span className="flex items-center gap-2">
+              View GitHub
+              <span className="font-icon" style={{ fontSize: 16 }}>
+                north_east
+              </span>
+            </span>
           </MagneticButton>
         </div>
 
         <div className="cta-element border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-text-muted text-xs">
-          <div>
+          <div className="flex flex-col md:items-start">
             <span className="text-text-primary font-medium">{siteData.name}</span>
-            <span className="mx-2">·</span>
             <span>{siteData.title}</span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <a
-              href={socialLinks.github}
-              className="hover:text-text-primary transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a
-              href={socialLinks.linkedin}
-              className="hover:text-text-primary transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              href={`mailto:${socialLinks.email}`}
-              className="hover:text-text-primary transition-colors"
-            >
-              Email
-            </a>
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex items-center gap-6">
+              <a
+                href={socialLinks.github}
+                className="hover:text-text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href={socialLinks.linkedin}
+                className="hover:text-text-primary transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                href={`mailto:${socialLinks.email}`}
+                className="hover:text-text-primary transition-colors"
+              >
+                Email
+              </a>
+            </div>
+            <span className="font-mono text-text-muted">
+              © {new Date().getFullYear()} Engineered with precision.
+            </span>
           </div>
         </div>
       </div>

@@ -262,11 +262,30 @@ export const experience = [
 ];
 
 export const currentFocus = [
-  "Product engineering for SaaS platforms",
-  "Full-stack systems with AI integration",
-  "Legacy modernization consulting",
-  "Remote engineering engagements",
-  "Building tools that solve real problems",
+  {
+    icon: "cloud_sync",
+    title: "SaaS Ecosystems",
+    description:
+      "Architecting multi-tenant platforms built to scale. Focused on service patterns that reduce latency and simplify operational complexity for product teams.",
+  },
+  {
+    icon: "smart_toy",
+    title: "AI Integration",
+    description:
+      "Bridging traditional applications with AI-enabled workflows — practical retrieval, orchestration, and automation, not hype.",
+  },
+  {
+    icon: "update",
+    title: "Legacy Modernization",
+    description:
+      "Breaking down monolithic systems incrementally. Transitional architectures that modernize core infrastructure without stopping the business.",
+  },
+  {
+    icon: "handshake",
+    title: "Remote Engagements",
+    description:
+      "Selected consulting and full-stack engineering work for teams that need a senior engineer who owns outcomes, not just tickets.",
+  },
 ];
 
 export const navLinks = [

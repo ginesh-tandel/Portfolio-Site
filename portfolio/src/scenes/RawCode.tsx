@@ -4,6 +4,8 @@ import RevealText from "../components/RevealText";
 
 const codeFragments = [
   {
+    filename: "Domain.cs",
+    position: "md:absolute md:top-0 md:left-0 md:w-[360px] z-30",
     lines: [
       '<span class="text-code-purple">public async</span> <span class="text-code-blue">Task</span><span class="text-code-orange">&lt;Product&gt;</span> <span class="text-code-green">BuildAsync</span>(',
       '    <span class="text-code-comment">// understand the problem</span>',
@@ -13,64 +15,60 @@ const codeFragments = [
     ],
   },
   {
+    filename: "Infrastructure.cs",
+    position: "md:absolute md:top-20 md:left-[28%] md:w-[420px] z-20",
     lines: [
-      '<span class="text-code-purple">public</span> <span class="text-code-blue">IActionResult</span> <span class="text-code-green">Create</span>(',
-      '    [<span class="text-code-orange">FromBody</span>] <span class="text-code-blue">CreateRequest</span> request)',
-      '{',
-      '    <span class="text-code-purple">var</span> result = <span class="text-code-blue">await</span> _service.<span class="text-code-green">ProcessAsync</span>(request);',
-      '    <span class="text-code-purple">return</span> <span class="text-code-green">Ok</span>(result);',
-      '}',
+      '<span class="text-code-purple">services</span>.<span class="text-code-green">AddInfrastructure</span>(cfg =&gt; {',
+      '    cfg.<span class="text-code-blue">UsePostgres</span>(connString)',
+      '       .<span class="text-code-blue">AddDistributedCache</span>()',
+      '       .<span class="text-code-blue">AddMessageBus</span>();',
+      '});',
     ],
   },
   {
+    filename: "Api.cs",
+    position: "md:absolute md:top-40 md:right-0 md:w-[340px] z-40",
     lines: [
-      '<span class="text-code-purple">public class</span> <span class="text-code-blue">LeadService</span> : <span class="text-code-orange">ILeadService</span>',
-      '{',
-      '    <span class="text-code-purple">public async</span> <span class="text-code-blue">Task</span><span class="text-code-orange">&lt;Lead&gt;</span> <span class="text-code-green">EnrichAsync</span>(',
-      '        <span class="text-code-blue">Lead</span> lead)',
-      '    {',
-      '        <span class="text-code-comment">// score, enrich, route</span>',
-      '    }',
-      '}',
+      '<span class="text-code-purple">app</span>.<span class="text-code-green">MapGet</span>(<span class="text-code-orange">"/api/v1/leads"</span>,',
+      '    <span class="text-code-blue">async</span> (ILeadService svc) =&gt;',
+      '    <span class="text-code-blue">await</span> svc.<span class="text-code-green">EnrichAsync</span>());',
     ],
   },
 ];
 
 export default function RawCode() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const codeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (prefersReducedMotion()) {
       const ctx = gsap.context(() => {
         gsap.set(".code-fragment", { opacity: 1, y: 0 });
-        gsap.set(".code-line-highlight", { scaleX: 1 });
       }, sectionRef);
       return () => ctx.revert();
     }
 
     const ctx = gsap.context(() => {
+      gsap.from(".code-headline", {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          end: "top 40%",
+          scrub: 1,
+        },
+        opacity: 0,
+        y: 30,
+      });
+
       gsap.from(".code-fragment", {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
+          start: "top 60%",
           end: "center center",
           scrub: 1,
         },
         opacity: 0,
-        y: 60,
+        y: 50,
         stagger: 0.2,
-      });
-
-      gsap.from(".code-line-highlight", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "40% 50%",
-          end: "70% 50%",
-          scrub: 1,
-        },
-        scaleX: 0,
-        transformOrigin: "left",
       });
     }, sectionRef);
 
@@ -81,43 +79,49 @@ export default function RawCode() {
     <section
       ref={sectionRef}
       data-scene="2"
-      className="relative min-h-screen flex flex-col justify-center py-32 px-6 md:px-10"
+      className="relative min-h-screen flex flex-col justify-center py-32 px-6 md:px-10 bg-surface"
     >
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
-        <div ref={codeRef} className="space-y-6">
-          {codeFragments.map((frag, i) => (
-            <div
-              key={i}
-              className="code-fragment font-mono text-xs md:text-sm leading-relaxed bg-code-bg border border-border rounded-lg p-5 overflow-hidden"
-            >
-              {frag.lines.map((line, j) => (
-                <div key={j} className="relative">
-                  <span
-                    className="code-line-highlight absolute inset-0 bg-accent/5 -mx-5 px-5"
-                  />
-                  <span dangerouslySetInnerHTML={{ __html: line }} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-
-        <div>
+      <div className="max-w-6xl mx-auto w-full flex flex-col gap-16 md:gap-24">
+        <div className="code-headline max-w-xl">
           <RevealText
             as="h2"
-            className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6"
+            className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6"
           >
             <span className="block">CODE IS ONLY</span>
             <span className="block text-text-secondary">THE BEGINNING.</span>
           </RevealText>
           <RevealText
             as="p"
-            delay={0.2}
-            className="text-text-muted text-sm md:text-base leading-relaxed max-w-md"
+            delay={0.15}
+            className="text-text-secondary text-sm md:text-base leading-relaxed"
           >
-            Every product starts with code. But raw code is just the first layer
-            of a much deeper system.
+            Writing code is the baseline. The true craft lies in assembling
+            these fragments into robust, scalable systems that solve actual
+            business problems.
           </RevealText>
+        </div>
+
+        <div className="relative flex flex-col gap-6 md:gap-0 md:h-[460px]">
+          {codeFragments.map((frag) => (
+            <div
+              key={frag.filename}
+              className={`code-fragment relative ${frag.position} bg-bg-elevated shadow-xl rounded-lg overflow-hidden`}
+            >
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+                <span className="w-2 h-2 rounded-full bg-surface-container-highest" />
+                <span className="w-2 h-2 rounded-full bg-surface-container-highest" />
+                <span className="w-2 h-2 rounded-full bg-surface-container-highest" />
+                <span className="ml-auto font-mono text-[10px] text-text-muted tracking-wide">
+                  {frag.filename}
+                </span>
+              </div>
+              <div className="p-5 font-mono text-xs md:text-[13px] leading-relaxed">
+                {frag.lines.map((line, j) => (
+                  <div key={j} dangerouslySetInnerHTML={{ __html: line }} />
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

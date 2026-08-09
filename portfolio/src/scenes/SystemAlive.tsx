@@ -47,15 +47,30 @@ export default function SystemAlive() {
     <section
       ref={sectionRef}
       data-scene="4"
-      className="relative min-h-screen flex flex-col justify-center py-32 px-6 md:px-10"
+      className="relative min-h-screen flex flex-col justify-center py-32 px-6 md:px-10 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto w-full">
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-br from-accent/[0.06] via-transparent to-transparent blur-3xl rounded-full pointer-events-none"
+      />
+
+      <div className="max-w-6xl mx-auto w-full relative">
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <span className="h-px w-12 bg-border-light" />
+          <span className="font-mono text-xs tracking-widest uppercase text-accent">
+            Transformation Phase
+          </span>
+          <span className="h-px w-12 bg-border-light" />
+        </div>
+
         <RevealText
           as="h2"
           className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-16 text-center"
         >
           <span className="block">FROM SYSTEMS</span>
-          <span className="block text-text-secondary">TO EXPERIENCES.</span>
+          <span className="block bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+            TO EXPERIENCES.
+          </span>
         </RevealText>
 
         <div className="relative max-w-3xl mx-auto">
