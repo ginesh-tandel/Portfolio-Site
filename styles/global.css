@@ -9,6 +9,7 @@
 }
 body{background:var(--bg);color:var(--text-primary);font-family:var(--font-body);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 
 .page{max-width:1440px;margin:0 auto}
 
@@ -16,10 +17,8 @@ a{color:inherit;text-decoration:none}
 .divider::after{content:'';position:absolute;left:0;top:0;width:100%;height:1px;background:var(--accent);opacity:0.35;transform:scaleX(var(--seam,0));transform-origin:left center}
 .spacer{height:36px}
 
-/* Highlight accent on key text */
 .highlight{color:var(--accent)}
 
-/* Scene labels always visible */
 .scene-label{
   font-family:var(--font-mono);
   font-size:12px;
@@ -29,37 +28,24 @@ a{color:inherit;text-decoration:none}
 }
 
 /* Headlines always visible by default — GSAP animates FROM hidden */
-.hero-headline .hero-line,
-.arch-headline h2,
-.biz-headline h2,
-.eng-headline h2,
+.ctp-hero-line,
+.tl-final h3,
 .cta-headline h2,
-.problem-statement,
-.problem-final h3,
-.timeline-final h3,
-.products-headline,
-.focus-headline{
+.proj-headline,
+.skills-headline,
+.tl-headline{
   opacity:1;
 }
 
 /* Content always visible by default */
-.hero-eyebrow,.hero-subtext,.hero-scroll,
-.arch-statement,.biz-statement,.biz-concerns,
-.scene-copy,.scene-headline,
-.code-line,.code-card,
-.product-mock,.product-mock-ll,
-.breakdown-item,.project-tag,.project-name,.project-subtitle,
-.layer-row,.layer-connector,.layer-name,.layer-items,
-.problem-item,.problem-flow,
-.timeline-item-inner,.timeline-year,.timeline-role,.timeline-desc,.timeline-tech,
-.focus-item,.focus-label,.focus-text,
+.ctp-hero-sub,.ctp-hero-scroll,.ctp-hero-eyebrow,
 .cta-subtext,.cta-buttons,.cta-primary,.cta-secondary,
+.proj-card-name,.proj-card-sub,.proj-card-desc,.proj-card-tag,
+.skills-name,.skills-item,
+.tl-year,.tl-role,.tl-desc,.tl-tech,
 .additional-item-inner,.additional-label,.additional-title,.additional-desc,.additional-stack,
-.mock-nav-item,.mock-bar,.mock-table-row,
-.arch-node-group,.arch-line,.arch-tag,
-.principles-tags .tag,
+.nav,.nav-links a,.nav-logo,.nav-progress,
 .footer,.footer-name,.footer-title,.footer-links a,
-.products-header,.additional-work,
 .tag{
   opacity:1;
 }
@@ -77,35 +63,18 @@ a{color:inherit;text-decoration:none}
 
 /* Responsive */
 @media(max-width:1024px){
-  .hero-headline .hero-line{font-size:64px!important}
   .cta-headline h2{font-size:64px!important}
-  .arch-headline h2{font-size:48px!important}
-  .biz-headline h2{font-size:48px!important}
-  .eng-headline h2{font-size:38px!important}
-  .code-teaser{flex-direction:column!important;gap:48px!important}
-  .code-card{width:100%!important}
-  .breakdown-grid{flex-direction:column!important}
-  .focus-row{flex-direction:column!important}
-  .additional-item-inner{flex-direction:column!important;align-items:flex-start!important;gap:8px!important}
+  .skills-headline{font-size:48px!important}
+  .tl-headline{font-size:48px!important}
 }
 @media(max-width:768px){
-  section,.hero,.nav,.footer,.code-teaser,.arch-scene,.system-scene,.products-header,.case-study,.additional-work,.eng-scene,.problem-scene,.biz-scene,.timeline-scene,.focus-scene,.cta-scene{padding-left:24px!important;padding-right:24px!important}
+  section,.skills-scene,.tl-scene,.cta-scene,.proj-header{padding-left:24px!important;padding-right:24px!important}
   .nav{padding:20px 24px!important}
   .nav-links{gap:20px}
-  .hero-headline .hero-line{font-size:40px!important}
   .cta-headline h2{font-size:40px!important}
-  .arch-headline h2,.biz-headline h2{font-size:36px!important}
-  .eng-headline h2{font-size:28px!important}
-  .problem-statement{font-size:28px!important}
-  .problem-final h3,.timeline-final h3{font-size:36px!important}
-  .focus-headline{font-size:36px!important}
-  .products-headline{font-size:40px!important}
-  .project-name{font-size:28px!important}
-  .stats-row-inner{flex-direction:column}
-  .timeline-item-inner{flex-direction:column;gap:12px}
-  .timeline-year{width:auto!important}
-  .footer{flex-direction:column;gap:20px;text-align:center}
+  .skills-headline{font-size:36px!important}
+  .tl-headline{font-size:36px!important}
+  .proj-headline{font-size:40px!important}
+  .footer{flex-direction:column;gap:20px;text-align:center;padding-bottom:88px}
   .footer-links{flex-wrap:wrap;justify-content:center}
-  .mock-sidebar{display:none}
-  .product-mock-ll{width:calc(100% - 48px)!important;margin:0 24px!important}
 }
