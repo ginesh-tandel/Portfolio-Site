@@ -66,7 +66,7 @@ function CaseStudy({ project, mirrored }: { project: Project; mirrored: boolean 
         <p className="text-text-secondary text-sm leading-relaxed">{project.result}</p>
         <div className="flex flex-wrap gap-2 mt-2">
           {project.capabilities.map((cap) => (
-            <span key={cap} className="text-[11px] px-2.5 py-1 border border-border-light rounded-full text-text-muted">
+            <span key={cap} className="font-mono text-[11px] px-2.5 py-1 border border-border-light text-text-muted">
               {cap}
             </span>
           ))}

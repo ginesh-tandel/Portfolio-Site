@@ -87,7 +87,7 @@ export default function ExperienceTimeline() {
                     {entry.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs px-2 py-1 border border-border rounded text-text-muted"
+                        className="font-mono text-xs px-2 py-1 border border-border text-text-muted"
                       >
                         {tech}
                       </span>

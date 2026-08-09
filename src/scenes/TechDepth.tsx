@@ -92,7 +92,7 @@ export default function TechDepth() {
             {allTech.map((item) => (
               <span
                 key={item}
-                className="tech-chip text-xs px-3 py-1.5 border border-border-light rounded text-text-secondary"
+                className="tech-chip font-mono text-xs px-3 py-1.5 border border-border-light text-text-secondary"
               >
                 {item}
               </span>

@@ -1,21 +1,20 @@
 import { useEffect, useRef } from "react";
 import { gsap, prefersReducedMotion } from "../lib/gsap";
 import RevealText from "../components/RevealText";
+import { architectureNodes } from "../data/content";
 
-const nodes = [
-  { id: "frontend", label: "Frontend", icon: "language", x: 12, y: 18, size: "sm", bg: "bg-secondary", fg: "text-bg-primary" },
-  { id: "api", label: "API Gateway", icon: "api", x: 38, y: 50, size: "lg", bg: "bg-accent", fg: "text-bg-primary" },
-  { id: "domain", label: "Domain", icon: "schema", x: 72, y: 18, size: "sm", bg: "bg-tertiary", fg: "text-bg-primary" },
-  { id: "infra", label: "Infrastructure", icon: "dns", x: 72, y: 80, size: "sm", bg: "bg-surface-container-highest", fg: "text-text-primary" },
-  { id: "db", label: "Database", icon: "database", x: 90, y: 50, size: "lg", bg: "bg-amber", fg: "text-bg-primary" },
-] as const;
-
-const connections: [number, number][] = [
-  [0, 1],
-  [1, 2],
-  [1, 3],
-  [2, 4],
-  [3, 4],
+const connections: [string, string][] = [
+  ["frontend", "api"],
+  ["api", "app"],
+  ["app", "domain"],
+  ["domain", "infra"],
+  ["infra", "db"],
+  ["auth", "api"],
+  ["cache", "app"],
+  ["jobs", "infra"],
+  ["integrate", "app"],
+  ["messaging", "infra"],
+  ["monitor", "infra"],
 ];
 
 export default function Architecture() {
@@ -90,42 +89,40 @@ export default function Architecture() {
           <svg
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
-            className="absolute inset-0 w-full h-full"
+            className="absolute inset-0 w-full h-full pointer-events-none"
           >
-            {connections.map(([from, to], i) => (
-              <line
-                key={i}
-                className="arch-line"
-                x1={nodes[from].x}
-                y1={nodes[from].y}
-                x2={nodes[to].x}
-                y2={nodes[to].y}
-                stroke="#2a2a2a"
-                strokeWidth="0.3"
-                strokeDasharray="1.4 1.4"
-                vectorEffect="non-scaling-stroke"
-              />
-            ))}
+            {connections.map(([fromId, toId], i) => {
+              const from = architectureNodes.find((node) => node.id === fromId);
+              const to = architectureNodes.find((node) => node.id === toId);
+              if (!from || !to) return null;
+              return (
+                <line
+                  key={i}
+                  className="arch-line"
+                  x1={from.x}
+                  y1={from.y}
+                  x2={to.x}
+                  y2={to.y}
+                  stroke="#555"
+                  strokeWidth="0.35"
+                  strokeDasharray="2 1"
+                  vectorEffect="non-scaling-stroke"
+                />
+              );
+            })}
           </svg>
 
-          {nodes.map((node) => (
+          {architectureNodes.map((node) => (
             <div
               key={node.id}
-              className="arch-node absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2"
+              className="arch-node absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-3"
               style={{ left: `${node.x}%`, top: `${node.y}%` }}
             >
-              <div
-                className={`${node.bg} ${node.fg} ${
-                  node.size === "lg" ? "w-16 h-16" : "w-12 h-12"
-                } rounded-full flex items-center justify-center shadow-lg`}
-              >
-                <span className="font-icon" style={{ fontSize: node.size === "lg" ? 26 : 20 }}>
-                  {node.icon}
+              <div className="w-14 h-14 bg-bg-primary/70 border border-border rounded-full flex items-center justify-center shadow-[0_20px_80px_rgba(0,0,0,0.16)]">
+                <span className="font-mono text-[10px] text-text-secondary text-center px-2">
+                  {node.label}
                 </span>
               </div>
-              <span className="font-mono text-[10px] uppercase tracking-wider text-text-secondary whitespace-nowrap">
-                {node.label}
-              </span>
             </div>
           ))}
         </div>

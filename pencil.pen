@@ -1,0 +1,4389 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Direction A — Cinematic Code-to-Product",
+      "clip": true,
+      "width": 1440,
+      "fill": "#0B0D10",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jdmx9",
+          "name": "Nav",
+          "width": "fill_container",
+          "stroke": "#22262C",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            26,
+            56
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "sQyvl",
+              "name": "Logo",
+              "fill": "#F5F6F7",
+              "content": "GINESH",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 16,
+              "fontWeight": "700",
+              "letterSpacing": 1
+            },
+            {
+              "type": "frame",
+              "id": "FDYKL",
+              "name": "Nav Links",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hDEqI",
+                  "name": "WORK",
+                  "fill": "#8A8F98",
+                  "content": "WORK",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "ZK18M",
+                  "name": "EXPERIENCE",
+                  "fill": "#8A8F98",
+                  "content": "EXPERIENCE",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "HwZVI",
+                  "name": "ABOUT",
+                  "fill": "#8A8F98",
+                  "content": "ABOUT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "hkOUm",
+                  "name": "CONTACT",
+                  "fill": "#8A8F98",
+                  "content": "CONTACT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HzrYu",
+          "name": "Hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 26,
+          "padding": [
+            150,
+            56,
+            110,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Ur359",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SENIOR .NET ENGINEER · SOFTWARE ARCHITECT · SAAS BUILDER",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "yfmwn",
+              "name": "Headline",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RWlWT",
+                  "name": "Headline Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "I TURN COMPLEX IDEAS",
+                  "lineHeight": 1.02,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 84,
+                  "fontWeight": "600",
+                  "letterSpacing": -1.5
+                },
+                {
+                  "type": "text",
+                  "id": "FqZfH",
+                  "name": "Headline Line 2",
+                  "fill": "#F5F6F7",
+                  "content": "INTO WORKING SOFTWARE.",
+                  "lineHeight": 1.02,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 84,
+                  "fontWeight": "600",
+                  "letterSpacing": -1.5
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "lFv2V",
+              "name": "Subtext",
+              "fill": "#8A8F98",
+              "textGrowth": "fixed-width",
+              "width": 560,
+              "content": "11+ years shipping production systems — from legacy modernization to SaaS products used by real businesses.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "J7trr",
+              "name": "Scroll Cue",
+              "fill": "#8A8F98",
+              "content": "SCROLL TO BUILD →",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "tzWx3",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "vwNJE",
+          "name": "Code Teaser",
+          "width": "fill_container",
+          "gap": 64,
+          "padding": [
+            90,
+            56
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kbM6W",
+              "name": "Code Card",
+              "width": 560,
+              "fill": "#12151A",
+              "cornerRadius": 6,
+              "stroke": "#22262C",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 6,
+              "padding": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LnFBv",
+                  "name": "Code Line",
+                  "fill": "#C9D1D9",
+                  "content": "public async Task<Product> BuildAsync(...)",
+                  "lineHeight": 1.6,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "m7SXg",
+                  "name": "Code Line",
+                  "fill": "#C9D1D9",
+                  "content": "{",
+                  "lineHeight": 1.6,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "kOqxL",
+                  "name": "Code Line",
+                  "fill": "#6B7280",
+                  "content": "    // understand the problem",
+                  "lineHeight": 1.6,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "HsRKp",
+                  "name": "Code Line",
+                  "fill": "#6B7280",
+                  "content": "    // design the system",
+                  "lineHeight": 1.6,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "m175pV",
+                  "name": "Code Line",
+                  "fill": "#6B7280",
+                  "content": "    // build the solution",
+                  "lineHeight": 1.6,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "N8Vlb",
+                  "name": "Code Line",
+                  "fill": "#C9D1D9",
+                  "content": "}",
+                  "lineHeight": 1.6,
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "plhAV",
+              "name": "Code Copy",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EBXGp",
+                  "name": "Scene Label",
+                  "fill": "#5EEAD4",
+                  "content": "SCENE 02 — RAW CODE",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.5
+                },
+                {
+                  "type": "text",
+                  "id": "M9yxYe",
+                  "name": "Scene Headline",
+                  "fill": "#F5F6F7",
+                  "textGrowth": "fixed-width",
+                  "width": 520,
+                  "content": "CODE IS ONLY THE BEGINNING.",
+                  "lineHeight": 1.1,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "CZnoq",
+                  "name": "Scene Copy",
+                  "fill": "#8A8F98",
+                  "textGrowth": "fixed-width",
+                  "width": 480,
+                  "content": "Fragments of code converge into architecture, systems, and finally, products people use.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "fSVo6",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "lcR6c",
+          "name": "Architecture Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "A0Vg37",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 03 — ARCHITECTURE",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "vNzBj",
+              "name": "Headline",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AP4yu",
+                  "name": "Headline Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "11+ YEARS",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 60,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "b4Gci",
+                  "name": "Headline Line 2",
+                  "fill": "#F5F6F7",
+                  "content": "OF ENGINEERING",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 60,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "S2YUdR",
+              "name": "Statement",
+              "fill": "#8A8F98",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Architecture isn't about adding complexity. It's about making complexity manageable.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "sdZLu",
+              "name": "Diagram Row",
+              "width": "fill_container",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eFYdT",
+                  "name": "Frontend",
+                  "fill": "#12151A",
+                  "cornerRadius": 4,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z6du92",
+                      "name": "Frontend Label",
+                      "fill": "#F5F6F7",
+                      "content": "Frontend",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "N9Znag",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#22262C"
+                },
+                {
+                  "type": "frame",
+                  "id": "PGHyh",
+                  "name": "API",
+                  "fill": "#12151A",
+                  "cornerRadius": 4,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tI9YA",
+                      "name": "API Label",
+                      "fill": "#F5F6F7",
+                      "content": "API",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Vpang",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#22262C"
+                },
+                {
+                  "type": "frame",
+                  "id": "jYv11",
+                  "name": "Application",
+                  "fill": "#12151A",
+                  "cornerRadius": 4,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BX7Xi",
+                      "name": "Application Label",
+                      "fill": "#F5F6F7",
+                      "content": "Application",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NIY95",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#22262C"
+                },
+                {
+                  "type": "frame",
+                  "id": "J8Zrv",
+                  "name": "Domain",
+                  "fill": "#12151A",
+                  "cornerRadius": 4,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CJacH",
+                      "name": "Domain Label",
+                      "fill": "#F5F6F7",
+                      "content": "Domain",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jFwjj",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#22262C"
+                },
+                {
+                  "type": "frame",
+                  "id": "awYpd",
+                  "name": "Infrastructure",
+                  "fill": "#12151A",
+                  "cornerRadius": 4,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M0Vaip",
+                      "name": "Infrastructure Label",
+                      "fill": "#F5F6F7",
+                      "content": "Infrastructure",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DqC55",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#22262C"
+                },
+                {
+                  "type": "frame",
+                  "id": "yBshU",
+                  "name": "Database",
+                  "fill": "#12151A",
+                  "cornerRadius": 4,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    12,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZNgYE",
+                      "name": "Database Label",
+                      "fill": "#F5F6F7",
+                      "content": "Database",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Anwfm",
+              "name": "Cross-cutting Tags",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hOLy3",
+                  "name": "AUTHENTICATION",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R3b6l",
+                      "name": "AUTHENTICATION Label",
+                      "fill": "#8A8F98",
+                      "content": "AUTHENTICATION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dT3W8",
+                  "name": "CACHING",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uUdJk",
+                      "name": "CACHING Label",
+                      "fill": "#8A8F98",
+                      "content": "CACHING",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "x2n8cL",
+                  "name": "BACKGROUND JOBS",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yO4jw",
+                      "name": "BACKGROUND JOBS Label",
+                      "fill": "#8A8F98",
+                      "content": "BACKGROUND JOBS",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BDKFv",
+                  "name": "INTEGRATIONS",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NiPfp",
+                      "name": "INTEGRATIONS Label",
+                      "fill": "#8A8F98",
+                      "content": "INTEGRATIONS",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VaYHz",
+                  "name": "MESSAGING",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M9DxL",
+                      "name": "MESSAGING Label",
+                      "fill": "#8A8F98",
+                      "content": "MESSAGING",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c92uH",
+                  "name": "MONITORING",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w0a90",
+                      "name": "MONITORING Label",
+                      "fill": "#8A8F98",
+                      "content": "MONITORING",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "vlR02",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "r07qJO",
+          "name": "System Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "L39gE",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 04 — SYSTEM COMES ALIVE",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "pxPYv",
+              "name": "Headline",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OUK22",
+                  "name": "Headline Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "FROM SYSTEMS",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 60,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "VdNvw",
+                  "name": "Headline Line 2",
+                  "fill": "#F5F6F7",
+                  "content": "TO EXPERIENCES.",
+                  "lineHeight": 1.05,
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 60,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "HFxwB",
+              "name": "Subtext",
+              "fill": "#8A8F98",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Wireframes become interfaces. Interfaces become products people rely on every day.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "xtyo0",
+              "name": "Product Mock",
+              "width": "fill_container",
+              "fill": "#12151A",
+              "cornerRadius": 8,
+              "stroke": "#22262C",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 20,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ER2Ff",
+                  "name": "Mock Top Bar",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DTMn9",
+                      "name": "Dots",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "Boc0v",
+                          "name": "Dot",
+                          "fill": "#EF4444",
+                          "width": 8,
+                          "height": 8
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "XWkBE",
+                          "name": "Dot",
+                          "fill": "#F59E0B",
+                          "width": 8,
+                          "height": 8
+                        },
+                        {
+                          "type": "ellipse",
+                          "id": "c2io7T",
+                          "name": "Dot",
+                          "fill": "#5EEAD4",
+                          "width": 8,
+                          "height": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "t11V3V",
+                      "name": "Mock Title",
+                      "fill": "#8A8F98",
+                      "content": "PRODUCT — DASHBOARD",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hQxHR",
+                  "name": "Mock Body",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Ye1G9",
+                      "name": "Mock Sidebar",
+                      "width": 150,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": [
+                        4,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "F1Tdzw",
+                          "name": "Nav Item",
+                          "fill": "#5EEAD4",
+                          "width": 110,
+                          "height": 9
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "D3msxG",
+                          "name": "Nav Item",
+                          "fill": "#1B1F26",
+                          "width": 90,
+                          "height": 9
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "lxUrY",
+                          "name": "Nav Item",
+                          "fill": "#1B1F26",
+                          "width": 130,
+                          "height": 9
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "D8OZEL",
+                          "name": "Nav Item",
+                          "fill": "#1B1F26",
+                          "width": 80,
+                          "height": 9
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "W8OeR",
+                          "name": "Nav Item",
+                          "fill": "#1B1F26",
+                          "width": 100,
+                          "height": 9
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Exn4v",
+                      "name": "Mock Main",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 18,
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "PsdNY",
+                          "name": "Header Bar",
+                          "fill": "#1B1F26",
+                          "width": 220,
+                          "height": 14
+                        },
+                        {
+                          "type": "frame",
+                          "id": "C2WrVH",
+                          "name": "Chart",
+                          "width": "fill_container",
+                          "height": 90,
+                          "gap": 8,
+                          "alignItems": "end",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "kUvaq",
+                              "name": "Bar",
+                              "fill": "#1B1F26",
+                              "width": "fill_container",
+                              "height": 40
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "xRQR3",
+                              "name": "Bar",
+                              "fill": "#1B1F26",
+                              "width": "fill_container",
+                              "height": 66
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "z4ArEa",
+                              "name": "Bar",
+                              "fill": "#1B1F26",
+                              "width": "fill_container",
+                              "height": 52
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "dk2jM",
+                              "name": "Bar",
+                              "fill": "#5EEAD4",
+                              "width": "fill_container",
+                              "height": 90
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "DhaJ6",
+                              "name": "Bar",
+                              "fill": "#1B1F26",
+                              "width": "fill_container",
+                              "height": 70
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "dUuEX",
+                              "name": "Bar",
+                              "fill": "#1B1F26",
+                              "width": "fill_container",
+                              "height": 58
+                            },
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 2,
+                              "id": "aUnos",
+                              "name": "Bar",
+                              "fill": "#5EEAD4",
+                              "width": "fill_container",
+                              "height": 82
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "N6ZGAn",
+                          "name": "Table Rows",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "O0jUBU",
+                              "name": "Table Row",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 2,
+                                  "id": "p5dyzx",
+                                  "name": "Row Label",
+                                  "fill": "#1B1F26",
+                                  "width": 180,
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 2,
+                                  "id": "dbV77",
+                                  "name": "Row Value",
+                                  "fill": "#1B1F26",
+                                  "width": 60,
+                                  "height": 8
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "O53wn6",
+                              "name": "Table Row",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 2,
+                                  "id": "HMkE8",
+                                  "name": "Row Label",
+                                  "fill": "#1B1F26",
+                                  "width": 180,
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 2,
+                                  "id": "die9X",
+                                  "name": "Row Value",
+                                  "fill": "#1B1F26",
+                                  "width": 60,
+                                  "height": 8
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "pYvIU",
+                              "name": "Table Row",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 2,
+                                  "id": "dj85N",
+                                  "name": "Row Label",
+                                  "fill": "#1B1F26",
+                                  "width": 180,
+                                  "height": 8
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 2,
+                                  "id": "aWenT",
+                                  "name": "Row Value",
+                                  "fill": "#1B1F26",
+                                  "width": 60,
+                                  "height": 8
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "MGA1b",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "GfWnk",
+          "name": "Products Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            100,
+            56,
+            40,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "wTJ5R",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 05 — SELECTED PRODUCTS",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "text",
+              "id": "hyKk4",
+              "name": "Headline",
+              "fill": "#F5F6F7",
+              "content": "SELECTED PRODUCTS.",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 56,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "z940T0",
+          "name": "Case Study — LogiqLead",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            56,
+            60,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "TK5o3",
+              "name": "Title Row",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "r0k22",
+                  "name": "Project Index",
+                  "fill": "#5EEAD4",
+                  "content": "PROJECT 01",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "wLPVx",
+                  "name": "Name Row",
+                  "gap": 16,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DiXEW",
+                      "name": "Project Name",
+                      "fill": "#F5F6F7",
+                      "content": "LogiqLead",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 40,
+                      "fontWeight": "600",
+                      "letterSpacing": -1
+                    },
+                    {
+                      "type": "text",
+                      "id": "O8aMB",
+                      "name": "Project Subtitle",
+                      "fill": "#8A8F98",
+                      "content": "SaaS Lead Engine",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "r1aAt",
+              "name": "Breakdown",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lwBf2",
+                  "name": "PROBLEM",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Nd9Pr",
+                      "name": "PROBLEM Label",
+                      "fill": "#5EEAD4",
+                      "content": "PROBLEM",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "V05Dq",
+                      "name": "PROBLEM Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Sales teams needed one system to find, enrich, and reach leads instead of stitching together five disconnected tools.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V6IIw",
+                  "name": "APPROACH",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BGPiK",
+                      "name": "APPROACH Label",
+                      "fill": "#5EEAD4",
+                      "content": "APPROACH",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "h58nE",
+                      "name": "APPROACH Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Design a SaaS platform combining enrichment, sequencing, and inbox management behind one clean workflow.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kzs4E",
+                  "name": "ARCHITECTURE",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YRO6N",
+                      "name": "ARCHITECTURE Label",
+                      "fill": "#5EEAD4",
+                      "content": "ARCHITECTURE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "mdTfM",
+                      "name": "ARCHITECTURE Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": ".NET / ASP.NET Core Web API, background job processing, SMTP/IMAP integration, PostgreSQL, Redis.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ULyvw",
+                  "name": "PRODUCT",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gIUSB",
+                      "name": "PRODUCT Label",
+                      "fill": "#5EEAD4",
+                      "content": "PRODUCT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "U8SWCj",
+                      "name": "PRODUCT Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Lead management, enrichment, automated email sequences, unified inbox, analytics dashboard.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BunTa",
+                  "name": "RESULT",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "he2bN",
+                      "name": "RESULT Label",
+                      "fill": "#5EEAD4",
+                      "content": "RESULT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "OSGQO",
+                      "name": "RESULT Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A production SaaS product handling real prospecting workflows, built and maintained end-to-end.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "oU9eQ",
+              "name": "Tags",
+              "width": "fill_container",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tlvj4",
+                  "name": "LEAD MANAGEMENT",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Y7KBP",
+                      "name": "LEAD MANAGEMENT Label",
+                      "fill": "#8A8F98",
+                      "content": "LEAD MANAGEMENT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yhgbD",
+                  "name": "ENRICHMENT",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "q1MV60",
+                      "name": "ENRICHMENT Label",
+                      "fill": "#8A8F98",
+                      "content": "ENRICHMENT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G7K6x",
+                  "name": "EMAIL SEQUENCES",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rqVtW",
+                      "name": "EMAIL SEQUENCES Label",
+                      "fill": "#8A8F98",
+                      "content": "EMAIL SEQUENCES",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RoVnF",
+                  "name": "AUTOMATION",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l0dAB",
+                      "name": "AUTOMATION Label",
+                      "fill": "#8A8F98",
+                      "content": "AUTOMATION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m4xq8E",
+                  "name": "SMTP/IMAP",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FIrhf",
+                      "name": "SMTP/IMAP Label",
+                      "fill": "#8A8F98",
+                      "content": "SMTP/IMAP",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vvl1U",
+                  "name": "INBOX",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ahmQR",
+                      "name": "INBOX Label",
+                      "fill": "#8A8F98",
+                      "content": "INBOX",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "kqpKp",
+                  "name": "ANALYTICS",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LgnlP",
+                      "name": "ANALYTICS Label",
+                      "fill": "#8A8F98",
+                      "content": "ANALYTICS",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gPf8z",
+                  "name": "BACKGROUND JOBS",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vL4Xx",
+                      "name": "BACKGROUND JOBS Label",
+                      "fill": "#8A8F98",
+                      "content": "BACKGROUND JOBS",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nMjyY",
+                  "name": "COMPLIANCE",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "K9rJ1",
+                      "name": "COMPLIANCE Label",
+                      "fill": "#8A8F98",
+                      "content": "COMPLIANCE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eAQFI",
+              "name": "Product Mock",
+              "width": "fill_container",
+              "fill": "#12151A",
+              "cornerRadius": 8,
+              "stroke": "#22262C",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 22,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "x89dK",
+                  "name": "Mock Top Bar",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i2FMGX",
+                      "name": "Mock Title",
+                      "fill": "#8A8F98",
+                      "content": "LOGIQLEAD — PRODUCT INTERFACE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "crWsk",
+                      "name": "Mock Status",
+                      "fill": "#5EEAD4",
+                      "content": "LIVE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UgLTb",
+                  "name": "Stats Row",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lkKbv",
+                      "name": "LEADS Stat",
+                      "width": "fill_container",
+                      "cornerRadius": 6,
+                      "stroke": "#22262C",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IkeIq",
+                          "name": "LEADS Stat Label",
+                          "fill": "#8A8F98",
+                          "content": "LEADS",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "qMoCL",
+                          "name": "LEADS Bar",
+                          "fill": "#1B1F26",
+                          "width": "fill_container",
+                          "height": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L3hEPO",
+                      "name": "SEQUENCES Stat",
+                      "width": "fill_container",
+                      "cornerRadius": 6,
+                      "stroke": "#22262C",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Gbsey",
+                          "name": "SEQUENCES Stat Label",
+                          "fill": "#8A8F98",
+                          "content": "SEQUENCES",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "RfL7f",
+                          "name": "SEQUENCES Bar",
+                          "fill": "#1B1F26",
+                          "width": "fill_container",
+                          "height": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qhcMO",
+                      "name": "INBOX Stat",
+                      "width": "fill_container",
+                      "cornerRadius": 6,
+                      "stroke": "#22262C",
+                      "strokeWidth": 1,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": 14,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LQn0N",
+                          "name": "INBOX Stat Label",
+                          "fill": "#8A8F98",
+                          "content": "INBOX",
+                          "fontFamily": "JetBrains Mono",
+                          "fontSize": 11,
+                          "fontWeight": "normal",
+                          "letterSpacing": 1
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "e46b6",
+                          "name": "INBOX Bar",
+                          "fill": "#1B1F26",
+                          "width": "fill_container",
+                          "height": 8
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aWXyc",
+                  "name": "Table Rows",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XJCHi",
+                      "name": "Table Row",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "Kg70t",
+                          "name": "Row Label",
+                          "fill": "#1B1F26",
+                          "width": 200,
+                          "height": 8
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "Vibkh",
+                          "name": "Row Value",
+                          "fill": "#1B1F26",
+                          "width": 60,
+                          "height": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "E3dvKu",
+                      "name": "Table Row",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "XmhcZ",
+                          "name": "Row Label",
+                          "fill": "#1B1F26",
+                          "width": 200,
+                          "height": 8
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "l6nxWI",
+                          "name": "Row Value",
+                          "fill": "#1B1F26",
+                          "width": 60,
+                          "height": 8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "X9vUzz",
+                      "name": "Table Row",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "HzZhI",
+                          "name": "Row Label",
+                          "fill": "#1B1F26",
+                          "width": 200,
+                          "height": 8
+                        },
+                        {
+                          "type": "rectangle",
+                          "cornerRadius": 2,
+                          "id": "ApYG5",
+                          "name": "Row Value",
+                          "fill": "#1B1F26",
+                          "width": 60,
+                          "height": 8
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "WcHU5",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "CnPw8",
+          "name": "Case Study — LogiqAIAssist",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "bshJI",
+              "name": "Title Row",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "I4ykI",
+                  "name": "Project Index",
+                  "fill": "#5EEAD4",
+                  "content": "PROJECT 02",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "hYGxx",
+                  "name": "Name Row",
+                  "gap": 16,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tWe5A",
+                      "name": "Project Name",
+                      "fill": "#F5F6F7",
+                      "content": "LogiqAIAssist",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 40,
+                      "fontWeight": "600",
+                      "letterSpacing": -1
+                    },
+                    {
+                      "type": "text",
+                      "id": "Vl5zQ",
+                      "name": "Project Subtitle",
+                      "fill": "#8A8F98",
+                      "content": "AI-Assisted Product Experience",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal",
+                      "fontStyle": "italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "R60WRJ",
+              "name": "Breakdown",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wBvkL",
+                  "name": "PROBLEM",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "n34RFE",
+                      "name": "PROBLEM Label",
+                      "fill": "#5EEAD4",
+                      "content": "PROBLEM",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "x2EeZ",
+                      "name": "PROBLEM Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Teams needed fast, accurate answers from internal knowledge without digging through scattered docs.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "F6isC",
+                  "name": "APPROACH",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xrbwE",
+                      "name": "APPROACH Label",
+                      "fill": "#5EEAD4",
+                      "content": "APPROACH",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "T17hvv",
+                      "name": "APPROACH Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Build an AI-assisted product that retrieves relevant context and turns it into usable answers and actions.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "SKZM2",
+                  "name": "ARCHITECTURE",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "N2tW5B",
+                      "name": "ARCHITECTURE Label",
+                      "fill": "#5EEAD4",
+                      "content": "ARCHITECTURE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "D50pyM",
+                      "name": "ARCHITECTURE Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": ".NET backend, LLM integration, retrieval pipeline, structured knowledge storage, API-first design.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K5uZYB",
+                  "name": "PRODUCT",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x8aOE",
+                      "name": "PRODUCT Label",
+                      "fill": "#5EEAD4",
+                      "content": "PRODUCT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "OG6ni",
+                      "name": "PRODUCT Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Conversational interface, knowledge retrieval, workflow automation triggered from responses.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CZYHk",
+                  "name": "RESULT",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Qci92",
+                      "name": "RESULT Label",
+                      "fill": "#5EEAD4",
+                      "content": "RESULT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "lXrFw",
+                      "name": "RESULT Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A working AI product experience wired into real backend systems, not a demo.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "FLOFh",
+              "name": "Tags",
+              "width": "fill_container",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qTsWH",
+                  "name": "AI INTERACTION",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yjGWY",
+                      "name": "AI INTERACTION Label",
+                      "fill": "#8A8F98",
+                      "content": "AI INTERACTION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "n5YzNJ",
+                  "name": "KNOWLEDGE RETRIEVAL",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g4Fwl",
+                      "name": "KNOWLEDGE RETRIEVAL Label",
+                      "fill": "#8A8F98",
+                      "content": "KNOWLEDGE RETRIEVAL",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r1Ya6V",
+                  "name": "WORKFLOW AUTOMATION",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "e0DW6",
+                      "name": "WORKFLOW AUTOMATION Label",
+                      "fill": "#8A8F98",
+                      "content": "WORKFLOW AUTOMATION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "u2dFr",
+                  "name": "API INTEGRATION",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YGUd6",
+                      "name": "API INTEGRATION Label",
+                      "fill": "#8A8F98",
+                      "content": "API INTEGRATION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aj28b",
+                  "name": "REAL-TIME RESPONSES",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    7,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rnfXJ",
+                      "name": "REAL-TIME RESPONSES Label",
+                      "fill": "#8A8F98",
+                      "content": "REAL-TIME RESPONSES",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "XH8GB",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "AvVuv",
+          "name": "Additional Work",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            60,
+            56,
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "w5wFTF",
+              "name": "Additional Work Label",
+              "fill": "#5EEAD4",
+              "content": "ADDITIONAL SELECTED WORK",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "w4eaXZ",
+              "name": "CRM Platform",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                20,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "L2oGc",
+                  "name": "CRM Platform Title",
+                  "fill": "#F5F6F7",
+                  "content": "CRM Platform",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "ABhBR",
+                  "name": "CRM Platform Desc",
+                  "fill": "#8A8F98",
+                  "textGrowth": "fixed-width",
+                  "width": 420,
+                  "content": "Business CRM modernization — legacy system rebuilt for scale.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CDoWI",
+                  "name": "CRM Platform Stack",
+                  "fill": "#8A8F98",
+                  "content": "ASP.NET Core · SQL Server · EF Core",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "J4RLP",
+              "name": "Legacy Modernization",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                20,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "K7FIp",
+                  "name": "Legacy Modernization Title",
+                  "fill": "#F5F6F7",
+                  "content": "Legacy Modernization",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Tj7a7",
+                  "name": "Legacy Modernization Desc",
+                  "fill": "#8A8F98",
+                  "textGrowth": "fixed-width",
+                  "width": 420,
+                  "content": "Migrated a monolithic line-of-business app to a maintainable, layered architecture.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "aCGzl",
+                  "name": "Legacy Modernization Stack",
+                  "fill": "#8A8F98",
+                  "content": "Clean Architecture · CQRS · Docker",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pqzXK",
+              "name": "API Platform",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "padding": [
+                20,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dgXDP",
+                  "name": "API Platform Title",
+                  "fill": "#F5F6F7",
+                  "content": "API Platform",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "eMOkx",
+                  "name": "API Platform Desc",
+                  "fill": "#8A8F98",
+                  "textGrowth": "fixed-width",
+                  "width": 420,
+                  "content": "Integration-heavy API platform connecting internal tools and third-party services.",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RVPLn",
+                  "name": "API Platform Stack",
+                  "fill": "#8A8F98",
+                  "content": "Web API · REST · Background Jobs",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "hqgJ8",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "ClwJt",
+          "name": "Engineering Depth Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "XC3Wq",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 06 — ENGINEERING DEPTH",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "cSqYu",
+              "name": "Headline",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZMYGX",
+                  "name": "Headline Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "THE TECHNOLOGY CHANGES.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 44,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "sBiUu",
+                  "name": "Headline Line 2",
+                  "fill": "#8A8F98",
+                  "content": "THE ENGINEERING PRINCIPLES DON'T.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 44,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BhAVQ",
+              "name": "Layer Stack",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "O2c5A",
+                  "name": "PRODUCT",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "x8ycON",
+                      "name": "PRODUCT Name",
+                      "fill": "#5EEAD4",
+                      "content": "PRODUCT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "W9jv7O",
+                      "name": "PRODUCT Items",
+                      "fill": "#F5F6F7",
+                      "content": "LogiqLead · LogiqAIAssist · Client Platforms",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vYMOl",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ltM29",
+                      "name": "Arrow",
+                      "fill": "#8A8F98",
+                      "content": "↓",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DA0Ua",
+                  "name": "APPLICATION LAYER",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TRVRw",
+                      "name": "APPLICATION LAYER Name",
+                      "fill": "#5EEAD4",
+                      "content": "APPLICATION LAYER",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "krCMC",
+                      "name": "APPLICATION LAYER Items",
+                      "fill": "#F5F6F7",
+                      "content": ".NET · ASP.NET Core · C# · Web API",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jHPyg",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "L1fool",
+                      "name": "Arrow",
+                      "fill": "#8A8F98",
+                      "content": "↓",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "g40Jup",
+                  "name": "DATA",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wd56O",
+                      "name": "DATA Name",
+                      "fill": "#5EEAD4",
+                      "content": "DATA",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "LpK7i",
+                      "name": "DATA Items",
+                      "fill": "#F5F6F7",
+                      "content": "SQL Server · PostgreSQL · MongoDB · EF Core",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KDsud",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dng10",
+                      "name": "Arrow",
+                      "fill": "#8A8F98",
+                      "content": "↓",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bRAf2",
+                  "name": "CACHING",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z91GC",
+                      "name": "CACHING Name",
+                      "fill": "#5EEAD4",
+                      "content": "CACHING",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "Xzdqo",
+                      "name": "CACHING Items",
+                      "fill": "#F5F6F7",
+                      "content": "Redis",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yWNpG",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Oc5jv",
+                      "name": "Arrow",
+                      "fill": "#8A8F98",
+                      "content": "↓",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jFz4Z",
+                  "name": "PROCESSING",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qakSO",
+                      "name": "PROCESSING Name",
+                      "fill": "#5EEAD4",
+                      "content": "PROCESSING",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "ACfEc",
+                      "name": "PROCESSING Items",
+                      "fill": "#F5F6F7",
+                      "content": "Background Jobs · Messaging",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V8DvR",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "waGOS",
+                      "name": "Arrow",
+                      "fill": "#8A8F98",
+                      "content": "↓",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Q7FGSn",
+                  "name": "CLIENT",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uQJbr",
+                      "name": "CLIENT Name",
+                      "fill": "#5EEAD4",
+                      "content": "CLIENT",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "EptyT",
+                      "name": "CLIENT Items",
+                      "fill": "#F5F6F7",
+                      "content": "Angular · React · TypeScript",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "L6gGkn",
+                  "name": "Connector",
+                  "width": "fill_container",
+                  "height": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XN5MT",
+                      "name": "Arrow",
+                      "fill": "#8A8F98",
+                      "content": "↓",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "arSPi",
+                  "name": "INFRASTRUCTURE",
+                  "width": "fill_container",
+                  "fill": "#12151A",
+                  "cornerRadius": 6,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CJQu0",
+                      "name": "INFRASTRUCTURE Name",
+                      "fill": "#5EEAD4",
+                      "content": "INFRASTRUCTURE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "LTjh1",
+                      "name": "INFRASTRUCTURE Items",
+                      "fill": "#F5F6F7",
+                      "content": "Docker · Cloud Infrastructure · REST APIs",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "m5XYNG",
+              "name": "Principles Tags",
+              "width": "fill_container",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mOiBf",
+                  "name": "CLEAN ARCHITECTURE",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HPuIW",
+                      "name": "CLEAN ARCHITECTURE Label",
+                      "fill": "#8A8F98",
+                      "content": "CLEAN ARCHITECTURE",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "u7bElY",
+                  "name": "CQRS",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hLrRK",
+                      "name": "CQRS Label",
+                      "fill": "#8A8F98",
+                      "content": "CQRS",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yj3rY",
+                  "name": "AUTHENTICATION",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X2ckAR",
+                      "name": "AUTHENTICATION Label",
+                      "fill": "#8A8F98",
+                      "content": "AUTHENTICATION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xweNz",
+                  "name": "CACHING STRATEGY",
+                  "cornerRadius": 20,
+                  "stroke": "#22262C",
+                  "strokeWidth": 1,
+                  "padding": [
+                    8,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Sb8PH",
+                      "name": "CACHING STRATEGY Label",
+                      "fill": "#8A8F98",
+                      "content": "CACHING STRATEGY",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "sR85p",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "TnMcL",
+          "name": "Problem Solving Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "qJrZJ",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 07 — PROBLEM SOLVING",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "rectangle",
+              "id": "PQjqU",
+              "name": "Spacer",
+              "fill": "#0B0D10",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "frame",
+              "id": "L0fcT",
+              "name": "LEGACY SYSTEMS",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                26,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "X2Hxx",
+                  "name": "LEGACY SYSTEMS Statement",
+                  "fill": "#F5F6F7",
+                  "content": "LEGACY SYSTEMS.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "TXBge",
+                  "name": "LEGACY SYSTEMS Flow",
+                  "fill": "#8A8F98",
+                  "content": "ANALYSIS → ARCHITECTURE → INCREMENTAL MIGRATION → RESULT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "t6zW6e",
+              "name": "SCALABILITY",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                26,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "sKCDw",
+                  "name": "SCALABILITY Statement",
+                  "fill": "#F5F6F7",
+                  "content": "SCALABILITY.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "zw2p9",
+                  "name": "SCALABILITY Flow",
+                  "fill": "#8A8F98",
+                  "content": "ANALYSIS → ARCHITECTURE → IMPLEMENTATION → RESULT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yPosq",
+              "name": "PERFORMANCE",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                26,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wb6WV",
+                  "name": "PERFORMANCE Statement",
+                  "fill": "#F5F6F7",
+                  "content": "PERFORMANCE.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "WaMMc",
+                  "name": "PERFORMANCE Flow",
+                  "fill": "#8A8F98",
+                  "content": "PROFILING → BOTTLENECK ANALYSIS → OPTIMIZATION → RESULT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "K5pDeo",
+              "name": "INTEGRATION COMPLEXITY",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                26,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HvFBp",
+                  "name": "INTEGRATION COMPLEXITY Statement",
+                  "fill": "#F5F6F7",
+                  "content": "INTEGRATION COMPLEXITY.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "qN6w9",
+                  "name": "INTEGRATION COMPLEXITY Flow",
+                  "fill": "#8A8F98",
+                  "content": "MAPPING → CONTRACT DESIGN → IMPLEMENTATION → RESULT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vNApT",
+              "name": "TECHNICAL DEBT",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                26,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XFtZc",
+                  "name": "TECHNICAL DEBT Statement",
+                  "fill": "#F5F6F7",
+                  "content": "TECHNICAL DEBT.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "iqwuf",
+                  "name": "TECHNICAL DEBT Flow",
+                  "fill": "#8A8F98",
+                  "content": "ASSESSMENT → PRIORITIZATION → REFACTOR → RESULT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MHr6C",
+              "name": "AMBIGUOUS REQUIREMENTS",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "padding": [
+                26,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "o8tamu",
+                  "name": "AMBIGUOUS REQUIREMENTS Statement",
+                  "fill": "#F5F6F7",
+                  "content": "AMBIGUOUS REQUIREMENTS.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 38,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "HHhmP",
+                  "name": "AMBIGUOUS REQUIREMENTS Flow",
+                  "fill": "#8A8F98",
+                  "content": "DISCOVERY → CLARIFICATION → ARCHITECTURE → RESULT",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "e8lmqK",
+              "name": "Final Statement",
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                40,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "A0jvzH",
+                  "name": "Final Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "I DON'T JUST BUILD FEATURES.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 44,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "bG1tq",
+                  "name": "Final Line 2",
+                  "fill": "#5EEAD4",
+                  "content": "I SOLVE THE CONSTRAINTS AROUND THEM.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 44,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "UwLCt",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "RHGB6",
+          "name": "Business + Human Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            130,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "b8SgX",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 08 — BUSINESS + HUMAN",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "BloAx",
+              "name": "Headline",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EEhEc",
+                  "name": "Headline Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "BEHIND THE CODE",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 60,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "olrJg",
+                  "name": "Headline Line 2",
+                  "fill": "#F5F6F7",
+                  "content": "IS A BUSINESS.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 60,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "q0Hq8L",
+              "name": "Statement",
+              "fill": "#8A8F98",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "I work at the intersection of engineering, product thinking, and business requirements.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "V6205",
+              "name": "Concerns",
+              "fill": "#8A8F98",
+              "content": "Users · Product goals · Revenue · Operations · Teams · Deadlines · Business constraints",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 13,
+              "fontWeight": "normal",
+              "letterSpacing": 0.3
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "NAp9w",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "xmTXE",
+          "name": "Experience Timeline Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "a9pMd",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 09 — EXPERIENCE",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "rectangle",
+              "id": "Tx7P6",
+              "name": "Spacer",
+              "fill": "#0B0D10",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "frame",
+              "id": "h4F6sV",
+              "name": "2015",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 40,
+              "padding": [
+                28,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "etTZn",
+                  "name": "2015 Label",
+                  "fill": "#5EEAD4",
+                  "textGrowth": "fixed-width",
+                  "width": 100,
+                  "content": "2015",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "RDC5Q",
+                  "name": "2015 Content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R1DFf",
+                      "name": "2015 Role",
+                      "fill": "#F5F6F7",
+                      "content": "Software Developer",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HiaF0",
+                      "name": "2015 Desc",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Started building production line-of-business applications, learning the fundamentals of shipping reliable software.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "e9SiRN",
+                      "name": "2015 Tech",
+                      "fill": "#8A8F98",
+                      "content": ".NET · C# · SQL Server",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DKWnK",
+              "name": "2018",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 40,
+              "padding": [
+                28,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "h2okui",
+                  "name": "2018 Label",
+                  "fill": "#5EEAD4",
+                  "textGrowth": "fixed-width",
+                  "width": 100,
+                  "content": "2018",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "c9OIr",
+                  "name": "2018 Content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "N8WUD",
+                      "name": "2018 Role",
+                      "fill": "#F5F6F7",
+                      "content": "Full-Stack .NET Developer",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Es7Uf",
+                      "name": "2018 Desc",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Took ownership of full-stack delivery — APIs, database design, and the front end consuming them.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "K0Qyo",
+                      "name": "2018 Tech",
+                      "fill": "#8A8F98",
+                      "content": "ASP.NET Core · Angular · EF Core",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vJV62",
+              "name": "2021",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 40,
+              "padding": [
+                28,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Didag",
+                  "name": "2021 Label",
+                  "fill": "#5EEAD4",
+                  "textGrowth": "fixed-width",
+                  "width": 100,
+                  "content": "2021",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "X4dK6Q",
+                  "name": "2021 Content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "z4pcs",
+                      "name": "2021 Role",
+                      "fill": "#F5F6F7",
+                      "content": "Senior .NET Engineer",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BYM84",
+                      "name": "2021 Desc",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Moved into architecture decisions — clean layering, background processing, and system reliability.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qxurS",
+                      "name": "2021 Tech",
+                      "fill": "#8A8F98",
+                      "content": "Clean Architecture · Redis · Docker",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E8vNG",
+              "name": "2024",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 40,
+              "padding": [
+                28,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eNkJu",
+                  "name": "2024 Label",
+                  "fill": "#5EEAD4",
+                  "textGrowth": "fixed-width",
+                  "width": 100,
+                  "content": "2024",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "F29z5A",
+                  "name": "2024 Content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Z0lzY",
+                      "name": "2024 Role",
+                      "fill": "#F5F6F7",
+                      "content": "Software Architect & Consultant",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sTWPu",
+                      "name": "2024 Desc",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Led modernization of legacy systems and designed multi-tenant SaaS architectures for clients.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "WkRPt",
+                      "name": "2024 Tech",
+                      "fill": "#8A8F98",
+                      "content": "CQRS · PostgreSQL · Cloud Infrastructure",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "R52eqd",
+              "name": "2026",
+              "width": "fill_container",
+              "stroke": "#22262C",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 40,
+              "padding": [
+                28,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RtHUV",
+                  "name": "2026 Label",
+                  "fill": "#5EEAD4",
+                  "textGrowth": "fixed-width",
+                  "width": 100,
+                  "content": "2026",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "z1Mtzv",
+                  "name": "2026 Content",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ahxux",
+                      "name": "2026 Role",
+                      "fill": "#F5F6F7",
+                      "content": "Senior Full-Stack Engineer & SaaS Builder",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 22,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lyiMs",
+                      "name": "2026 Desc",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Building and maintaining products end-to-end — LogiqLead, LogiqAIAssist, and consulting engagements.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iynKI",
+                      "name": "2026 Tech",
+                      "fill": "#8A8F98",
+                      "content": "AI Integration · React · Full Product Ownership",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "YfRKd",
+              "name": "Final Statement",
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                40,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GW4QS",
+                  "name": "Final Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "11+ YEARS.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 52,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                },
+                {
+                  "type": "text",
+                  "id": "W9mAEJ",
+                  "name": "Final Line 2",
+                  "fill": "#5EEAD4",
+                  "content": "STILL BUILDING.",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 52,
+                  "fontWeight": "600",
+                  "letterSpacing": -1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "b5oKp6",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "lAOfX",
+          "name": "Current Focus Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 36,
+          "padding": [
+            100,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "XzUK1",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "SCENE 10 — CURRENT FOCUS",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "text",
+              "id": "M1Ddxe",
+              "name": "Headline",
+              "fill": "#F5F6F7",
+              "content": "WHAT I'M FOCUSED ON NOW.",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 48,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "frame",
+              "id": "ah0PG",
+              "name": "Focus Row",
+              "width": "fill_container",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "oMmFo",
+                  "name": "PRODUCT ENGINEERING",
+                  "width": "fill_container",
+                  "stroke": "#22262C",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zKxJw",
+                      "name": "PRODUCT ENGINEERING Label",
+                      "fill": "#5EEAD4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "PRODUCT ENGINEERING",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "bif8N",
+                      "name": "PRODUCT ENGINEERING Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Building and maintaining SaaS products end-to-end, from architecture to shipped features.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xGlym",
+                  "name": "AI-ENABLED APPLICATIONS",
+                  "width": "fill_container",
+                  "stroke": "#22262C",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U3cgS",
+                      "name": "AI-ENABLED APPLICATIONS Label",
+                      "fill": "#5EEAD4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "AI-ENABLED APPLICATIONS",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "lkur6",
+                      "name": "AI-ENABLED APPLICATIONS Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Integrating AI and LLM capability into real product workflows, not demos.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "o1LWY4",
+                  "name": "LEGACY MODERNIZATION",
+                  "width": "fill_container",
+                  "stroke": "#22262C",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w9MBD",
+                      "name": "LEGACY MODERNIZATION Label",
+                      "fill": "#5EEAD4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LEGACY MODERNIZATION",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Roxsx",
+                      "name": "LEGACY MODERNIZATION Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Migrating monolithic systems to maintainable, layered architectures.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Li61w",
+                  "name": "CONSULTING & REMOTE WORK",
+                  "width": "fill_container",
+                  "stroke": "#22262C",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "O1djT",
+                      "name": "CONSULTING & REMOTE WORK Label",
+                      "fill": "#5EEAD4",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "CONSULTING & REMOTE WORK",
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 12,
+                      "fontWeight": "normal",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "XQgQo",
+                      "name": "CONSULTING & REMOTE WORK Text",
+                      "fill": "#8A8F98",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Selected remote engineering and architecture consulting for teams and founders.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "j0ZIng",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "GMeWd",
+          "name": "Final CTA Scene",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 28,
+          "padding": [
+            180,
+            56,
+            140,
+            56
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "vmOYP",
+              "name": "Eyebrow",
+              "fill": "#5EEAD4",
+              "content": "LET'S BUILD",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 12,
+              "fontWeight": "normal",
+              "letterSpacing": 1.5
+            },
+            {
+              "type": "frame",
+              "id": "hD8a9",
+              "name": "Headline",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HnwCr",
+                  "name": "Headline Line 1",
+                  "fill": "#F5F6F7",
+                  "content": "WHAT SHOULD",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 88,
+                  "fontWeight": "600",
+                  "letterSpacing": -1.5
+                },
+                {
+                  "type": "text",
+                  "id": "NnVV3",
+                  "name": "Headline Line 2",
+                  "fill": "#F5F6F7",
+                  "content": "WE BUILD NEXT?",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 88,
+                  "fontWeight": "600",
+                  "letterSpacing": -1.5
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "VvuDg",
+              "name": "Subtext",
+              "fill": "#8A8F98",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Available for selected remote engineering, consulting, and product engagements.",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "TqVhp",
+              "name": "CTA Buttons",
+              "gap": 20,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aOcFQ",
+                  "name": "Primary CTA",
+                  "fill": "#5EEAD4",
+                  "padding": [
+                    16,
+                    26
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Lg8Lm",
+                      "name": "Primary CTA Label",
+                      "fill": "#0B0D10",
+                      "content": "START A CONVERSATION →",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "rNXpu",
+                  "name": "Secondary CTA",
+                  "fill": "#F5F6F7",
+                  "content": "VIEW GITHUB →",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal",
+                  "letterSpacing": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "dfbOI",
+          "name": "Divider",
+          "fill": "#22262C",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "f0uGZt",
+          "name": "Footer",
+          "width": "fill_container",
+          "padding": [
+            40,
+            56
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "RbK7R",
+              "name": "Footer Left",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SZc6p",
+                  "name": "Footer Name",
+                  "fill": "#F5F6F7",
+                  "content": "Ginesh Tandel",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "h8xUSQ",
+                  "name": "Footer Title",
+                  "fill": "#8A8F98",
+                  "content": "Senior .NET Full-Stack Engineer",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "y2Wa1y",
+              "name": "Footer Links",
+              "gap": 28,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wGmIN",
+                  "name": "EMAIL",
+                  "fill": "#8A8F98",
+                  "content": "EMAIL",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "v5XsXg",
+                  "name": "GITHUB",
+                  "fill": "#8A8F98",
+                  "content": "GITHUB",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "V2ZEP",
+                  "name": "LINKEDIN",
+                  "fill": "#8A8F98",
+                  "content": "LINKEDIN",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileToken": "d88e07d7-a522-4049-9792-ad74960cc201"
+}

@@ -62,13 +62,25 @@ export default function RawCode() {
       gsap.from(".code-fragment", {
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 60%",
+          start: "top 65%",
           end: "center center",
           scrub: 1,
         },
         opacity: 0,
-        y: 50,
+        y: 60,
         stagger: 0.2,
+      });
+
+      gsap.from(".code-link", {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 70%",
+          end: "60% center",
+          scrub: 1,
+        },
+        opacity: 0,
+        scale: 0.85,
+        stagger: 0.15,
       });
     }, sectionRef);
 
@@ -101,13 +113,19 @@ export default function RawCode() {
           </RevealText>
         </div>
 
-        <div className="relative flex flex-col gap-6 md:gap-0 md:h-[460px]">
+        <div className="relative flex flex-col gap-6 md:gap-0 md:h-[520px]">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="code-link absolute left-[18%] top-[24%] w-12 h-px bg-accent/30" />
+            <div className="code-link absolute left-[50%] top-[45%] w-16 h-px bg-secondary/30" />
+            <div className="code-link absolute right-[10%] top-[30%] h-px w-14 bg-accent/20" />
+          </div>
+
           {codeFragments.map((frag) => (
             <div
               key={frag.filename}
-              className={`code-fragment relative ${frag.position} bg-bg-elevated shadow-xl rounded-lg overflow-hidden`}
+              className={`code-fragment relative ${frag.position} bg-bg-elevated/95 border border-border-light shadow-2xl rounded-3xl overflow-hidden backdrop-blur-sm`}
             >
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-bg-secondary/70">
                 <span className="w-2 h-2 rounded-full bg-surface-container-highest" />
                 <span className="w-2 h-2 rounded-full bg-surface-container-highest" />
                 <span className="w-2 h-2 rounded-full bg-surface-container-highest" />
@@ -115,7 +133,7 @@ export default function RawCode() {
                   {frag.filename}
                 </span>
               </div>
-              <div className="p-5 font-mono text-xs md:text-[13px] leading-relaxed">
+              <div className="p-5 font-mono text-xs md:text-[13px] leading-relaxed text-text-secondary">
                 {frag.lines.map((line, j) => (
                   <div key={j} dangerouslySetInnerHTML={{ __html: line }} />
                 ))}

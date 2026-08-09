@@ -85,12 +85,11 @@ export default function ColdOpen() {
         ref={initLinesRef}
         className="absolute inset-0 flex flex-col items-center justify-center gap-3 font-mono text-sm text-text-muted"
       >
-        <div className="init-line opacity-0">&gt; system.initialize()</div>
-        <div className="init-line opacity-0">&gt; loading experience...</div>
-        <div className="init-line opacity-0">&gt; loading architecture...</div>
-        <div className="init-line opacity-0">
-          &gt; loading {siteData.yearsExperience} years of engineering...
-        </div>
+        <div className="init-line opacity-0">initializing...</div>
+        <div className="init-line opacity-0">loading experience</div>
+        <div className="init-line opacity-0">loading architecture</div>
+        <div className="init-line opacity-0">loading products</div>
+        <div className="init-line opacity-0">loading {siteData.yearsExperience} years of engineering</div>
         <div className="init-line opacity-0 w-2 h-4 bg-text-muted/50 animate-pulse mt-2" />
       </div>
 
@@ -119,9 +118,16 @@ export default function ColdOpen() {
         </p>
 
         <div className="hero-cta">
-          <span className="inline-block text-xs tracking-[0.3em] text-text-muted border-b border-border-light pb-1 hover:text-accent hover:border-accent transition-colors duration-300 cursor-pointer">
+          <a
+            href="#work"
+            className="inline-flex items-center gap-2 text-xs tracking-[0.35em] uppercase text-text-muted border-b border-border-light pb-1 hover:text-accent hover:border-accent transition-colors duration-300"
+          >
             {siteData.scrollCta}
-          </span>
+          </a>
+        </div>
+        <div className="mt-12 font-mono text-[11px] uppercase tracking-[0.35em] text-text-secondary flex items-center justify-center gap-2">
+          <span className="h-4 w-0.5 bg-text-secondary animate-pulse" />
+          cursor
         </div>
       </div>
 
