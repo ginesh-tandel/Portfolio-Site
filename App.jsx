@@ -95,9 +95,9 @@ export default function App() {
         <Divider />
         <ProblemSolving />
         <Divider />
-        <Business />
-        <Divider />
         <Timeline />
+        <Divider />
+        <Business />
         <Divider />
         <Focus />
         <Divider />

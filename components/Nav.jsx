@@ -4,8 +4,8 @@ import { lenisRef } from '../lenis'
 import './Nav.css'
 
 const sectionClasses = ['.hero', '.code-teaser', '.arch-scene', '.system-scene',
-  '.products-header', '.eng-scene', '.problem-scene', '.biz-scene',
-  '.timeline-scene', '.focus-scene', '.cta-scene']
+  '.products-header', '.eng-scene', '.problem-scene', '.timeline-scene',
+  '.biz-scene', '.focus-scene', '.cta-scene']
 const navItems = [
   { label: 'WORK', href: '#work' },
   { label: 'EXPERIENCE', href: '#experience' },
