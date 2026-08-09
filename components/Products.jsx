@@ -1,36 +1,57 @@
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Products.css'
 
-const logiqLeadTags = ['LEAD MANAGEMENT','ENRICHMENT','EMAIL SEQUENCES','AUTOMATION','SMTP/IMAP','INBOX','ANALYTICS','BACKGROUND JOBS','COMPLIANCE']
-const logiqAiTags = ['AI INTERACTION','KNOWLEDGE RETRIEVAL','WORKFLOW AUTOMATION','API INTEGRATION','REAL-TIME RESPONSES']
+gsap.registerPlugin(ScrollTrigger)
+
+const logiqLeadTags = ['LEAD MANAGEMENT', 'ENRICHMENT', 'EMAIL SEQUENCES', 'AUTOMATION', 'SMTP/IMAP', 'INBOX', 'ANALYTICS', 'BACKGROUND JOBS', 'COMPLIANCE']
+const logiqAiTags = ['AI INTERACTION', 'KNOWLEDGE RETRIEVAL', 'WORKFLOW AUTOMATION', 'API INTEGRATION', 'REAL-TIME RESPONSES']
 
 const breakdown1 = [
-  { label:'PROBLEM', text:'Sales teams needed one system to find, enrich, and reach leads instead of stitching together five disconnected tools.' },
-  { label:'APPROACH', text:'Design a SaaS platform combining enrichment, sequencing, and inbox management behind one clean workflow.' },
-  { label:'ARCHITECTURE', text:'.NET / ASP.NET Core Web API, background job processing, SMTP/IMAP integration, PostgreSQL, Redis.' },
-  { label:'PRODUCT', text:'Lead management, enrichment, automated email sequences, unified inbox, analytics dashboard.' },
-  { label:'RESULT', text:'A production SaaS product handling real prospecting workflows, built and maintained end-to-end.' },
+  { label: 'PROBLEM', text: 'Sales teams needed one system to find, enrich, and reach leads instead of stitching together five disconnected tools.' },
+  { label: 'APPROACH', text: 'Design a SaaS platform combining enrichment, sequencing, and inbox management behind one clean workflow.' },
+  { label: 'ARCHITECTURE', text: '.NET / ASP.NET Core Web API, background job processing, SMTP/IMAP integration, PostgreSQL, Redis.' },
+  { label: 'PRODUCT', text: 'Lead management, enrichment, automated email sequences, unified inbox, analytics dashboard.' },
+  { label: 'RESULT', text: 'A production SaaS product handling real prospecting workflows, built and maintained end-to-end.' },
 ]
 
 const breakdown2 = [
-  { label:'PROBLEM', text:'Teams needed fast, accurate answers from internal knowledge without digging through scattered docs.' },
-  { label:'APPROACH', text:'Build an AI-assisted product that retrieves relevant context and turns it into usable answers and actions.' },
-  { label:'ARCHITECTURE', text:'.NET backend, LLM integration, retrieval pipeline, structured knowledge storage, API-first design.' },
-  { label:'PRODUCT', text:'Conversational interface, knowledge retrieval, workflow automation triggered from responses.' },
-  { label:'RESULT', text:'A working AI product experience wired into real backend systems, not a demo.' },
+  { label: 'PROBLEM', text: 'Teams needed fast, accurate answers from internal knowledge without digging through scattered docs.' },
+  { label: 'APPROACH', text: 'Build an AI-assisted product that retrieves relevant context and turns it into usable answers and actions.' },
+  { label: 'ARCHITECTURE', text: '.NET backend, LLM integration, retrieval pipeline, structured knowledge storage, API-first design.' },
+  { label: 'PRODUCT', text: 'Conversational interface, knowledge retrieval, workflow automation triggered from responses.' },
+  { label: 'RESULT', text: 'A working AI product experience wired into real backend systems, not a demo.' },
 ]
 
 const additionalWork = [
-  { title:'CRM Platform', desc:'Business CRM modernization — legacy system rebuilt for scale.', stack:'ASP.NET Core · SQL Server · EF Core' },
-  { title:'Legacy Modernization', desc:'Migrated a monolithic line-of-business app to a maintainable, layered architecture.', stack:'Clean Architecture · CQRS · Docker' },
-  { title:'API Platform', desc:'Integration-heavy API platform connecting internal tools and third-party services.', stack:'Web API · REST · Background Jobs' },
+  { title: 'CRM Platform', desc: 'Business CRM modernization — legacy system rebuilt for scale.', stack: 'ASP.NET Core · SQL Server · EF Core' },
+  { title: 'Legacy Modernization', desc: 'Migrated a monolithic line-of-business app to a maintainable, layered architecture.', stack: 'Clean Architecture · CQRS · Docker' },
+  { title: 'API Platform', desc: 'Integration-heavy API platform connecting internal tools and third-party services.', stack: 'Web API · REST · Background Jobs' },
 ]
 
 function CaseStudy({ index, name, subtitle, breakdown, tags }) {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(ref.current.querySelectorAll('.breakdown-item'), {
+        scrollTrigger: { trigger: ref.current, start: 'top 75%' },
+        opacity: 0, y: 20, stagger: 0.08, duration: 0.5,
+      })
+      gsap.from(ref.current.querySelectorAll('.project-tag'), {
+        scrollTrigger: { trigger: ref.current, start: 'top 70%' },
+        opacity: 0, scale: 0.9, stagger: 0.04, duration: 0.3,
+      })
+    }, ref)
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <section className="case-study">
-      <div style={{display:'flex',flexDirection:'column',gap:'6px'}}>
+    <section className="case-study" ref={ref}>
+      <div className="case-study-header">
         <div className="project-index">PROJECT 0{index}</div>
-        <div style={{display:'flex',gap:'16px',alignItems:'baseline'}}>
+        <div className="case-study-title-row">
           <div className="project-name">{name}</div>
           <div className="project-subtitle">{subtitle}</div>
         </div>
@@ -51,9 +72,21 @@ function CaseStudy({ index, name, subtitle, breakdown, tags }) {
 }
 
 export default function Products() {
+  const headerRef = useRef(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.products-headline', {
+        scrollTrigger: { trigger: headerRef.current, start: 'top 80%' },
+        opacity: 0, y: 40, duration: 0.8, ease: 'power3.out',
+      })
+    }, headerRef)
+    return () => ctx.revert()
+  }, [])
+
   return (
     <>
-      <div className="products-header" id="work">
+      <div className="products-header" id="work" ref={headerRef}>
         <div className="scene-label">SCENE 05 — SELECTED PRODUCTS</div>
         <h2 className="products-headline">SELECTED PRODUCTS.</h2>
       </div>
@@ -66,15 +99,15 @@ export default function Products() {
           <div className="mock-status">LIVE</div>
         </div>
         <div className="stats-row-inner">
-          {[{label:'LEADS',w:'75%'},{label:'SEQUENCES',w:'60%'},{label:'INBOX',w:'85%'}].map(s => (
+          {[{ label: 'LEADS', w: '75%' }, { label: 'SEQUENCES', w: '60%' }, { label: 'INBOX', w: '85%' }].map(s => (
             <div key={s.label} className="stat-card">
               <div className="stat-label">{s.label}</div>
-              <div className="stat-bar" style={{width:s.w}} />
+              <div className="stat-bar" style={{ width: s.w }} />
             </div>
           ))}
         </div>
         <div className="mock-table-rows">
-          {[1,2,3].map(i => (
+          {[1, 2, 3].map(i => (
             <div key={i} className="mock-table-row"><div className="mock-row-label" /><div className="mock-row-value" /></div>
           ))}
         </div>

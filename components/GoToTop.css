@@ -1,0 +1,40 @@
+.go-top {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.go-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.go-top:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+@media (max-width: 768px) {
+  .go-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}

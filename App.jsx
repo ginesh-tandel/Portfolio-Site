@@ -1,5 +1,9 @@
-import { useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Lenis from 'lenis'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ColdOpen from './components/ColdOpen'
+import CustomCursor from './components/CustomCursor'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import CodeTeaser from './components/CodeTeaser'
@@ -13,7 +17,10 @@ import Timeline from './components/Timeline'
 import Focus from './components/Focus'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import GoToTop from './components/GoToTop'
 import './styles/global.css'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function Divider() {
   return <div className="divider" />
@@ -21,6 +28,9 @@ function Divider() {
 
 function useReveal() {
   useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReduced) return
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -32,7 +42,9 @@ function useReveal() {
       { threshold: 0.1 }
     )
 
-    document.querySelectorAll('section, .case-study, .product-mock-ll, .additional-item-inner, .timeline-item-inner, .problem-item, .layer-row, .focus-item, .products-header').forEach((el) => {
+    document.querySelectorAll(
+      'section, .case-study, .product-mock-ll, .additional-item-inner, .timeline-item-inner, .problem-item, .layer-row, .focus-item, .products-header'
+    ).forEach((el) => {
       el.classList.add('reveal')
       observer.observe(el)
     })
@@ -42,7 +54,12 @@ function useReveal() {
 }
 
 export default function App() {
+  const [coldOpenDone, setColdOpenDone] = useState(false)
   useReveal()
+
+  const handleColdOpenComplete = useCallback(() => {
+    setColdOpenDone(true)
+  }, [])
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -51,41 +68,59 @@ export default function App() {
       smoothWheel: true,
     })
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+    lenis.on('scroll', ScrollTrigger.update)
 
-    requestAnimationFrame(raf)
-    return () => lenis.destroy()
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
+    gsap.ticker.lagSmoothing(0)
+
+    return () => {
+      lenis.destroy()
+      gsap.ticker.remove(lenis.raf)
+    }
   }, [])
 
+  useEffect(() => {
+    if (!coldOpenDone) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [coldOpenDone])
+
   return (
-    <div className="page">
-      <Nav />
-      <Hero />
-      <Divider />
-      <CodeTeaser />
-      <Divider />
-      <Architecture />
-      <Divider />
-      <SystemScene />
-      <Divider />
-      <Products />
-      <Divider />
-      <Engineering />
-      <Divider />
-      <ProblemSolving />
-      <Divider />
-      <Business />
-      <Divider />
-      <Timeline />
-      <Divider />
-      <Focus />
-      <Divider />
-      <CTA />
-      <Divider />
-      <Footer />
-    </div>
+    <>
+      <div className="page">
+        {!coldOpenDone && <ColdOpen onComplete={handleColdOpenComplete} />}
+        <CustomCursor />
+        <Nav />
+        <Hero />
+        <Divider />
+        <CodeTeaser />
+        <Divider />
+        <Architecture />
+        <Divider />
+        <SystemScene />
+        <Divider />
+        <Products />
+        <Divider />
+        <Engineering />
+        <Divider />
+        <ProblemSolving />
+        <Divider />
+        <Business />
+        <Divider />
+        <Timeline />
+        <Divider />
+        <Focus />
+        <Divider />
+        <CTA />
+        <Divider />
+        <Footer />
+      </div>
+      <GoToTop />
+    </>
   )
 }

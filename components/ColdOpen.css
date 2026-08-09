@@ -1,0 +1,47 @@
+.cold-open {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.cold-open.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.cold-open-terminal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.cold-open-line {
+  opacity: 0;
+  animation: coldOpenLine 0.3s ease forwards;
+}
+.cold-open-prompt {
+  color: var(--accent);
+  margin-right: 8px;
+}
+.cold-open-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--accent);
+  animation: cursorBlink 1s step-end infinite;
+  margin-left: 20px;
+}
+@keyframes coldOpenLine {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

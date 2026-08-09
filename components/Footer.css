@@ -1,7 +1,37 @@
-.footer{display:flex;justify-content:space-between;align-items:center;padding:40px 56px}
-.footer-left{display:flex;flex-direction:column;gap:4px}
-.footer-name{font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--text-primary)}
-.footer-title{font-family:var(--font-body);font-size:13px;color:var(--text-muted)}
-.footer-links{display:flex;gap:28px;align-items:center}
-.footer-links a{font-family:var(--font-mono);font-size:12px;letter-spacing:1px;color:var(--text-muted);transition:color .2s}
-.footer-links a:hover{color:var(--accent)}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 56px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.footer-title {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}

@@ -1,8 +1,79 @@
-.code-teaser{display:flex;gap:64px;padding:90px 56px;align-items:center}
-.code-card{width:560px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:6px;flex-shrink:0}
-.code-line{font-family:var(--font-mono);font-size:14px;line-height:1.6;color:var(--text-code)}
-.code-line.comment{color:var(--text-comment)}
-.code-copy{flex:1;display:flex;flex-direction:column;gap:16px}
-.scene-label{font-family:var(--font-mono);font-size:12px;letter-spacing:1.5px;color:var(--accent)}
-.scene-headline{font-family:var(--font-display);font-size:38px;font-weight:600;line-height:1.1;color:var(--text-primary)}
-.scene-copy{font-family:var(--font-body);font-size:15px;line-height:1.5;color:var(--text-muted);max-width:480px}
+.code-teaser {
+  display: flex;
+  gap: 80px;
+  padding: 120px 56px;
+  align-items: center;
+}
+.code-card {
+  width: 520px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.code-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.4;
+}
+.code-line {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-code);
+  will-change: transform, opacity;
+}
+.code-line.comment {
+  color: var(--text-comment);
+}
+.code-line .kw {
+  color: var(--accent);
+  opacity: 0.7;
+}
+.code-line .type {
+  color: #7dd3fc;
+}
+.code-line .func {
+  color: #fbbf24;
+}
+.code-line.keyword {
+  color: #c084fc;
+}
+.code-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.scene-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+}
+.scene-headline {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -1px;
+}
+.scene-copy {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 440px;
+}
