@@ -1,10 +1,19 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import './CTA.css'
+
+const EMAIL = 'hello@ginesh.dev'
 
 export default function CTA() {
   const sectionRef = useRef(null)
   const primaryRef = useRef(null)
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = () => {
+    navigator.clipboard?.writeText(EMAIL)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
 
   useEffect(() => {
     const el = sectionRef.current
@@ -75,6 +84,9 @@ export default function CTA() {
           VIEW GITHUB →
         </a>
       </div>
+      <button className="cta-email-copy" onClick={copyEmail} type="button">
+        {copied ? 'COPIED' : `${EMAIL} — CLICK TO COPY`}
+      </button>
     </section>
   )
 }

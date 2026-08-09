@@ -7,23 +7,20 @@
   z-index: 10000;
   will-change: transform;
 }
-.custom-cursor {
+.custom-cursor-ring {
   width: 36px;
   height: 36px;
   border: 1px solid var(--accent);
   border-radius: 50%;
   opacity: 0.5;
-  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
   margin-left: -18px;
   margin-top: -18px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform;
 }
-.custom-cursor.hover {
-  width: 56px;
-  height: 56px;
-  margin-left: -28px;
-  margin-top: -28px;
+.custom-cursor.hover .custom-cursor-ring {
+  transform: scale(1.556); /* 56px / 36px, matches prior grow-on-hover size */
   opacity: 0.3;
-  border-color: var(--accent);
 }
 .custom-cursor-dot {
   width: 4px;

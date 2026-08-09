@@ -9,10 +9,10 @@
   gap: 8px;
   padding: 28px 0;
   border-bottom: 1px solid var(--border);
-  transition: padding-left 0.2s;
+  transition: transform 0.2s;
 }
 .problem-item:hover {
-  padding-left: 8px;
+  transform: translateX(8px);
 }
 .problem-statement {
   font-family: var(--font-display);

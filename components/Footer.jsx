@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-title">Senior .NET Full-Stack Engineer</div>
       </div>
       <div className="footer-links">
-        <a href="mailto:hello@ginesh.dev">EMAIL</a>
+        <a href="mailto:hello@ginesh.dev">hello@ginesh.dev</a>
         <a href="https://github.com/gineshtandel" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">GITHUB</a>
         <a href="https://linkedin.com/in/gineshtandel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LINKEDIN</a>
       </div>

@@ -9,10 +9,10 @@
   padding: 32px 0;
   border-bottom: 1px solid var(--border);
   align-items: flex-start;
-  transition: padding-left 0.2s;
+  transition: transform 0.2s;
 }
 .timeline-item-inner:hover {
-  padding-left: 8px;
+  transform: translateX(8px);
 }
 .timeline-year {
   font-family: var(--font-mono);

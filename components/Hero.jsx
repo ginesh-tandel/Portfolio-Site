@@ -13,7 +13,7 @@ export default function Hero() {
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: 'power2.out' }
       )
-      gsap.fromTo('.hero-headline .hero-line',
+      const headlineEntrance = gsap.fromTo('.hero-headline .hero-line',
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 1, stagger: 0.15, delay: 0.4, ease: 'power3.out' }
       )
@@ -29,17 +29,24 @@ export default function Hero() {
       if (reducedMotion) {
         gsap.set('.hero-headline .hero-line', { y: -60, opacity: 0.3, scale: 0.97 })
       } else {
-        gsap.to('.hero-headline .hero-line', {
-          scrollTrigger: {
-            trigger: el,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 1,
-          },
-          y: -60,
-          opacity: 0.3,
-          scale: 0.97,
-        })
+        const createScrubTween = () => {
+          gsap.fromTo('.hero-headline .hero-line',
+            { y: 0, opacity: 1, scale: 1 },
+            {
+              scrollTrigger: {
+                trigger: el,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1,
+              },
+              y: -60,
+              opacity: 0.3,
+              scale: 0.97,
+              overwrite: false,
+            }
+          )
+        }
+        headlineEntrance.eventCallback('onComplete', createScrubTween)
       }
     }, el)
 

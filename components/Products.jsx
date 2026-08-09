@@ -85,9 +85,16 @@ function CaseStudy({ index, name, subtitle, breakdown, tags }) {
   )
 }
 
+const aiConversation = [
+  { role: 'user', text: 'Where do we stand on the Q3 onboarding docs?' },
+  { role: 'ai', text: 'Found 3 relevant docs. Onboarding flow is drafted, missing the billing section.' },
+  { role: 'user', text: 'Draft the billing section and assign it to Priya.' },
+]
+
 export default function Products() {
   const headerRef = useRef(null)
   const llMockRef = useRef(null)
+  const aiMockRef = useRef(null)
 
   useEffect(() => {
     const el = headerRef.current
@@ -118,6 +125,19 @@ export default function Products() {
         { opacity: 0, x: -20 },
         { opacity: 1, x: 0, stagger: 0.08, duration: 0.4,
           scrollTrigger: { trigger: el, start: 'top 70%' } }
+      )
+    }, el)
+    return () => ctx.revert()
+  }, [])
+
+  useEffect(() => {
+    const el = aiMockRef.current
+    if (!el || reducedMotion) return
+    const ctx = gsap.context(() => {
+      gsap.fromTo(el.querySelectorAll('.ai-message'),
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, stagger: 0.15, duration: 0.4,
+          scrollTrigger: { trigger: el, start: 'top 75%' } }
       )
     }, el)
     return () => ctx.revert()
@@ -155,6 +175,18 @@ export default function Products() {
       <div className="divider" />
 
       <CaseStudy index={2} name="LogiqAIAssist" subtitle="AI Knowledge & Workflow Engine" breakdown={breakdown2} tags={logiqAiTags} />
+
+      <div className="product-mock-ai" ref={aiMockRef}>
+        <div className="mock-topbar">
+          <div className="mock-title">LOGIQAIASSIST — CONVERSATION</div>
+          <div className="mock-status">LIVE</div>
+        </div>
+        <div className="ai-messages">
+          {aiConversation.map((m, i) => (
+            <div key={i} className={`ai-message ai-message-${m.role}`}>{m.text}</div>
+          ))}
+        </div>
+      </div>
 
       <div className="divider" />
 
