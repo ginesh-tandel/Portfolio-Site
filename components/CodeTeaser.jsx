@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { reducedMotion } from '../lib/reducedMotion'
 import './CodeTeaser.css'
 
 export default function CodeTeaser() {
@@ -8,13 +9,17 @@ export default function CodeTeaser() {
   useEffect(() => {
     const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.fromTo(el.querySelectorAll('.code-line'),
-        { opacity: 0, x: -20 },
-        {
-          opacity: 1, x: 0, stagger: 0.1, duration: 0.5,
-          scrollTrigger: { trigger: el, start: 'top 80%', end: 'top 30%', scrub: 1 },
-        }
-      )
+      if (reducedMotion) {
+        gsap.set(el.querySelectorAll('.code-line'), { opacity: 1, x: 0 })
+      } else {
+        gsap.fromTo(el.querySelectorAll('.code-line'),
+          { opacity: 0, x: -20 },
+          {
+            opacity: 1, x: 0, stagger: 0.1, duration: 0.5,
+            scrollTrigger: { trigger: el, start: 'top 80%', end: 'top 30%', scrub: 1 },
+          }
+        )
+      }
       gsap.fromTo(el.querySelector('.scene-label'),
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: el, start: 'top 75%' } }

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { reducedMotion } from '../lib/reducedMotion'
 import './Products.css'
 
 const logiqLeadTags = ['LEAD MANAGEMENT', 'ENRICHMENT', 'EMAIL SEQUENCES', 'AUTOMATION', 'SMTP/IMAP', 'INBOX', 'ANALYTICS', 'BACKGROUND JOBS', 'COMPLIANCE']
@@ -33,14 +34,29 @@ function CaseStudy({ index, name, subtitle, breakdown, tags }) {
   useEffect(() => {
     const el = ref.current
     const ctx = gsap.context(() => {
-      gsap.fromTo(el.querySelectorAll('.breakdown-item'),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, stagger: 0.08, duration: 0.5, scrollTrigger: { trigger: el, start: 'top 75%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.project-tag'),
-        { opacity: 0, scale: 0.9 },
-        { opacity: 1, scale: 1, stagger: 0.04, duration: 0.3, scrollTrigger: { trigger: el, start: 'top 70%' } }
-      )
+      if (reducedMotion) {
+        gsap.set(el.querySelectorAll('.breakdown-item'), { opacity: 1, y: 0 })
+        gsap.set(el.querySelectorAll('.project-tag'), { opacity: 1, scale: 1 })
+      } else {
+        gsap.fromTo(el.querySelectorAll('.breakdown-item'),
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1, y: 0,
+            stagger: 0.12,
+            scrollTrigger: {
+              trigger: el.querySelector('.breakdown-grid'),
+              start: 'top 80%',
+              end: 'bottom 40%',
+              scrub: 0.5,
+            },
+          }
+        )
+        gsap.fromTo(el.querySelectorAll('.project-tag'),
+          { opacity: 0, scale: 0.9 },
+          { opacity: 1, scale: 1, stagger: 0.04, duration: 0.3,
+            scrollTrigger: { trigger: el, start: 'top 70%' } }
+        )
+      }
     }, el)
     return () => ctx.revert()
   }, [])
@@ -71,13 +87,37 @@ function CaseStudy({ index, name, subtitle, breakdown, tags }) {
 
 export default function Products() {
   const headerRef = useRef(null)
+  const llMockRef = useRef(null)
 
   useEffect(() => {
     const el = headerRef.current
     const ctx = gsap.context(() => {
-      gsap.fromTo(el.querySelector('.products-headline'),
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+      if (reducedMotion) {
+        gsap.set(el.querySelector('.products-headline'), { opacity: 1, y: 0 })
+      } else {
+        gsap.fromTo(el.querySelector('.products-headline'),
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+        )
+      }
+    }, el)
+    return () => ctx.revert()
+  }, [])
+
+  useEffect(() => {
+    const el = llMockRef.current
+    if (!el || reducedMotion) return
+    const ctx = gsap.context(() => {
+      gsap.fromTo(el.querySelectorAll('.stat-bar'),
+        { scaleX: 0 },
+        { scaleX: 1, stagger: 0.06, duration: 0.4, ease: 'power2.out',
+          transformOrigin: 'left center',
+          scrollTrigger: { trigger: el, start: 'top 75%' } }
+      )
+      gsap.fromTo(el.querySelectorAll('.mock-table-row'),
+        { opacity: 0, x: -20 },
+        { opacity: 1, x: 0, stagger: 0.08, duration: 0.4,
+          scrollTrigger: { trigger: el, start: 'top 70%' } }
       )
     }, el)
     return () => ctx.revert()
@@ -92,7 +132,7 @@ export default function Products() {
 
       <CaseStudy index={1} name="LogiqLead" subtitle="SaaS Lead Management Platform" breakdown={breakdown1} tags={logiqLeadTags} />
 
-      <div className="product-mock-ll">
+      <div className="product-mock-ll" ref={llMockRef}>
         <div className="mock-topbar">
           <div className="mock-title">LOGIQLEAD — PRODUCT INTERFACE</div>
           <div className="mock-status">LIVE</div>

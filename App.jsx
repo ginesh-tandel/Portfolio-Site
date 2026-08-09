@@ -18,15 +18,11 @@ import Focus from './components/Focus'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 import GoToTop from './components/GoToTop'
+import { lenisRef } from './lenis'
+import { initSceneTransitions } from './lib/sceneTransitions'
 import './styles/global.css'
 
 gsap.registerPlugin(ScrollTrigger)
-
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  // Collapses every fromTo/to entrance animation's duration/delay/stagger
-  // to near-zero so content still appears, just without the motion.
-  gsap.globalTimeline.timeScale(100)
-}
 
 function Divider() {
   return <div className="divider" />
@@ -52,6 +48,7 @@ export default function App() {
     })
 
     lenis.on('scroll', ScrollTrigger.update)
+    lenisRef.current = lenis
 
     const rafCallback = (time) => {
       lenis.raf(time * 1000)
@@ -59,9 +56,12 @@ export default function App() {
     gsap.ticker.add(rafCallback)
     gsap.ticker.lagSmoothing(0)
 
+    initSceneTransitions()
+
     return () => {
       lenis.off('scroll', ScrollTrigger.update)
       lenis.destroy()
+      lenisRef.current = null
       gsap.ticker.remove(rafCallback)
     }
   }, [coldOpenDone])

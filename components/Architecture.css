@@ -27,7 +27,7 @@
 .arch-svg-container {
   width: 100%;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 20px 64px 20px 0; /* right clearance for the fixed .go-top button */
 }
 .arch-svg {
   width: 100%;

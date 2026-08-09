@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { lenisRef } from '../lenis'
 import './GoToTop.css'
 
 export default function GoToTop() {
@@ -13,7 +14,11 @@ export default function GoToTop() {
   }, [])
 
   const scrollUp = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0)
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
 
   return (

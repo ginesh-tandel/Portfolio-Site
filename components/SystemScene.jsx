@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { reducedMotion } from '../lib/reducedMotion'
 import './SystemScene.css'
 
 export default function SystemScene() {
@@ -8,30 +9,85 @@ export default function SystemScene() {
   useEffect(() => {
     const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.fromTo(el.querySelector('.scene-label'),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: el, start: 'top 80%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.arch-headline h2'),
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
-      )
-      gsap.fromTo(el.querySelector('.arch-statement'),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.mock-nav-item'),
-        { scaleX: 0 },
-        { scaleX: 1, stagger: 0.08, duration: 0.5, ease: 'power2.out', transformOrigin: 'left center', scrollTrigger: { trigger: el, start: 'top 70%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.mock-bar'),
-        { scaleY: 0 },
-        { scaleY: 1, stagger: 0.06, duration: 0.5, ease: 'power2.out', transformOrigin: 'bottom center', scrollTrigger: { trigger: el, start: 'top 65%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.mock-table-row'),
-        { opacity: 0, x: -20 },
-        { opacity: 1, x: 0, stagger: 0.1, duration: 0.4, scrollTrigger: { trigger: el, start: 'top 60%' } }
-      )
+      const isDesktop = window.matchMedia('(min-width: 1025px)').matches
+
+      if (reducedMotion || !isDesktop) {
+        if (reducedMotion) {
+          gsap.set(el.querySelector('.scene-label'), { opacity: 1, y: 0 })
+          gsap.set(el.querySelectorAll('.arch-headline h2'), { opacity: 1, y: 0 })
+          gsap.set(el.querySelector('.arch-statement'), { opacity: 1, y: 0 })
+          gsap.set(el.querySelectorAll('.mock-nav-item'), { scaleX: 1 })
+          gsap.set(el.querySelectorAll('.mock-bar'), { scaleY: 1 })
+          gsap.set(el.querySelectorAll('.mock-table-row'), { opacity: 1, x: 0 })
+        } else {
+          gsap.fromTo(el.querySelector('.scene-label'),
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: el, start: 'top 80%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.arch-headline h2'),
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+          )
+          gsap.fromTo(el.querySelector('.arch-statement'),
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.mock-nav-item'),
+            { scaleX: 0 },
+            { scaleX: 1, stagger: 0.08, duration: 0.5, ease: 'power2.out', transformOrigin: 'left center', scrollTrigger: { trigger: el, start: 'top 70%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.mock-bar'),
+            { scaleY: 0 },
+            { scaleY: 1, stagger: 0.06, duration: 0.5, ease: 'power2.out', transformOrigin: 'bottom center', scrollTrigger: { trigger: el, start: 'top 65%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.mock-table-row'),
+            { opacity: 0, x: -20 },
+            { opacity: 1, x: 0, stagger: 0.1, duration: 0.4, scrollTrigger: { trigger: el, start: 'top 60%' } }
+          )
+        }
+      } else {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: 'top top',
+            end: '+=80%',
+            pin: true,
+            scrub: 1,
+          },
+        })
+
+        tl.fromTo(el.querySelector('.scene-label'),
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.1 }
+        )
+        tl.fromTo(el.querySelectorAll('.arch-headline h2'),
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.15, stagger: 0.05 }
+        )
+        tl.fromTo(el.querySelector('.arch-statement'),
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.1 },
+          '<0.05'
+        )
+
+        tl.fromTo(el.querySelectorAll('.mock-nav-item'),
+          { scaleX: 0 },
+          { scaleX: 1, stagger: 0.04, duration: 0.12, ease: 'power2.out', transformOrigin: 'left center' },
+          '>-0.02'
+        )
+
+        tl.fromTo(el.querySelectorAll('.mock-bar'),
+          { scaleY: 0 },
+          { scaleY: 1, stagger: 0.03, duration: 0.15, ease: 'power2.out', transformOrigin: 'bottom center' },
+          '>-0.06'
+        )
+
+        tl.fromTo(el.querySelectorAll('.mock-table-row'),
+          { opacity: 0, x: -20 },
+          { opacity: 1, x: 0, stagger: 0.05, duration: 0.1 },
+          '>-0.04'
+        )
+      }
     }, el)
 
     return () => ctx.revert()

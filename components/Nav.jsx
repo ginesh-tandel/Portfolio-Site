@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { lenisRef } from '../lenis'
 import './Nav.css'
 
-const sections = ['home', 'code', 'architecture', 'system', 'work', 'engineering', 'problems', 'about', 'experience', 'focus', 'contact']
+const sectionClasses = ['.hero', '.code-teaser', '.arch-scene', '.system-scene',
+  '.products-header', '.eng-scene', '.problem-scene', '.biz-scene',
+  '.timeline-scene', '.focus-scene', '.cta-scene']
 const navItems = [
   { label: 'WORK', href: '#work' },
   { label: 'EXPERIENCE', href: '#experience' },
@@ -14,16 +18,29 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => {
-      const scrollY = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const pct = docHeight > 0 ? scrollY / docHeight : 0
-      const idx = Math.min(Math.floor(pct * sections.length) + 1, sections.length)
-      setProgress(String(idx).padStart(2, '0'))
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const triggers = sectionClasses.map((cls, i) => {
+      const el = document.querySelector(cls)
+      if (!el) return null
+      return ScrollTrigger.create({
+        trigger: el,
+        start: 'top center',
+        onToggle: (self) => {
+          if (self.isActive) setProgress(String(i + 1).padStart(2, '0'))
+        },
+      })
+    }).filter(Boolean)
+
+    return () => triggers.forEach(t => t.kill())
   }, [])
+
+  const scrollToSection = (e, href) => {
+    e.preventDefault()
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(href, { offset: 0 })
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   useEffect(() => {
     if (menuOpen) {
@@ -40,9 +57,9 @@ export default function Nav() {
         <div className="nav-logo">GINESH</div>
         <div className="nav-links">
           {navItems.map(item => (
-            <a key={item.label} href={item.href}>{item.label}</a>
+            <a key={item.label} href={item.href} onClick={(e) => scrollToSection(e, item.href)}>{item.label}</a>
           ))}
-          <span className="nav-progress">{progress} / {String(sections.length).padStart(2, '0')}</span>
+          <span className="nav-progress">{progress} / {String(sectionClasses.length).padStart(2, '0')}</span>
         </div>
         <button className="nav-menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
           <span className={`hamburger ${menuOpen ? 'open' : ''}`}>
@@ -54,11 +71,11 @@ export default function Nav() {
       <div className={`mobile-overlay ${menuOpen ? 'open' : ''}`}>
         <div className="mobile-overlay-inner">
           {navItems.map(item => (
-            <a key={item.label} href={item.href} className="mobile-link" onClick={() => setMenuOpen(false)}>
+            <a key={item.label} href={item.href} className="mobile-link" onClick={(e) => { scrollToSection(e, item.href); setMenuOpen(false) }}>
               {item.label}
             </a>
           ))}
-          <div className="mobile-progress">{progress} / {String(sections.length).padStart(2, '0')}</div>
+          <div className="mobile-progress">{progress} / {String(sectionClasses.length).padStart(2, '0')}</div>
         </div>
       </div>
     </>

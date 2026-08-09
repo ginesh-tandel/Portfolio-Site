@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { reducedMotion } from '../lib/reducedMotion'
 import './Hero.css'
 
 export default function Hero() {
@@ -25,17 +26,21 @@ export default function Hero() {
         { opacity: 1, duration: 0.6, delay: 1.3, ease: 'power2.out' }
       )
 
-      gsap.to('.hero-headline .hero-line', {
-        scrollTrigger: {
-          trigger: el,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 1,
-        },
-        y: -60,
-        opacity: 0.3,
-        scale: 0.97,
-      })
+      if (reducedMotion) {
+        gsap.set('.hero-headline .hero-line', { y: -60, opacity: 0.3, scale: 0.97 })
+      } else {
+        gsap.to('.hero-headline .hero-line', {
+          scrollTrigger: {
+            trigger: el,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1,
+          },
+          y: -60,
+          opacity: 0.3,
+          scale: 0.97,
+        })
+      }
     }, el)
 
     return () => ctx.revert()

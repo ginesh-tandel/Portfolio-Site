@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { reducedMotion } from '../lib/reducedMotion'
 import './Architecture.css'
 
 const nodes = ['Frontend', 'API', 'Application', 'Domain', 'Infrastructure', 'Database']
@@ -11,30 +12,90 @@ export default function Architecture() {
   useEffect(() => {
     const el = sectionRef.current
     const ctx = gsap.context(() => {
-      gsap.fromTo(el.querySelectorAll('.arch-headline h2'),
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
-      )
-      gsap.fromTo(el.querySelector('.arch-statement'),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
-      )
-      gsap.fromTo(el.querySelector('.arch-svg-container'),
-        { opacity: 0 },
-        { opacity: 1, duration: 1, scrollTrigger: { trigger: el, start: 'top 70%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.arch-node-group'),
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, stagger: 0.1, duration: 0.5, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 70%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.arch-line'),
-        { scaleX: 0 },
-        { scaleX: 1, stagger: 0.08, duration: 0.4, ease: 'power2.out', transformOrigin: 'left center', scrollTrigger: { trigger: el, start: 'top 70%' } }
-      )
-      gsap.fromTo(el.querySelectorAll('.arch-tag'),
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, stagger: 0.06, duration: 0.4, scrollTrigger: { trigger: el, start: 'top 65%' } }
-      )
+      const isDesktop = window.matchMedia('(min-width: 1025px)').matches
+
+      if (reducedMotion || !isDesktop) {
+        if (reducedMotion) {
+          gsap.set(el.querySelectorAll('.arch-headline h2'), { opacity: 1, y: 0 })
+          gsap.set(el.querySelector('.arch-statement'), { opacity: 1, y: 0 })
+          gsap.set(el.querySelector('.arch-svg-container'), { opacity: 1 })
+          gsap.set(el.querySelectorAll('.arch-node-group'), { opacity: 1, y: 0 })
+          gsap.set(el.querySelectorAll('.arch-line'), { scaleX: 1 })
+          gsap.set(el.querySelectorAll('.arch-tag'), { opacity: 1, y: 0 })
+        } else {
+          gsap.fromTo(el.querySelectorAll('.arch-headline h2'),
+            { opacity: 0, y: 40 },
+            { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } }
+          )
+          gsap.fromTo(el.querySelector('.arch-statement'),
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.6, delay: 0.2, scrollTrigger: { trigger: el, start: 'top 75%' } }
+          )
+          gsap.fromTo(el.querySelector('.arch-svg-container'),
+            { opacity: 0 },
+            { opacity: 1, duration: 1, scrollTrigger: { trigger: el, start: 'top 70%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.arch-node-group'),
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, stagger: 0.1, duration: 0.5, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 70%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.arch-line'),
+            { scaleX: 0 },
+            { scaleX: 1, stagger: 0.08, duration: 0.4, ease: 'power2.out', transformOrigin: 'left center', scrollTrigger: { trigger: el, start: 'top 70%' } }
+          )
+          gsap.fromTo(el.querySelectorAll('.arch-tag'),
+            { opacity: 0, y: 10 },
+            { opacity: 1, y: 0, stagger: 0.06, duration: 0.4, scrollTrigger: { trigger: el, start: 'top 65%' } }
+          )
+        }
+      } else {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: 'top top',
+            end: '+=80%',
+            pin: true,
+            scrub: 1,
+          },
+        })
+
+        tl.fromTo(el.querySelectorAll('.arch-headline h2'),
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.15, stagger: 0.05 }
+        )
+        tl.fromTo(el.querySelector('.arch-statement'),
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.1 },
+          '<0.05'
+        )
+        tl.fromTo(el.querySelector('.arch-svg-container'),
+          { opacity: 0 },
+          { opacity: 1, duration: 0.1 }
+        )
+
+        const nodeGroups = el.querySelectorAll('.arch-node-group')
+        const lines = el.querySelectorAll('.arch-line')
+        nodeGroups.forEach((node, i) => {
+          tl.fromTo(node,
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.12, ease: 'power2.out' },
+            i === 0 ? '>-0.04' : '>-0.06'
+          )
+          if (lines[i]) {
+            tl.fromTo(lines[i],
+              { scaleX: 0 },
+              { scaleX: 1, duration: 0.08, ease: 'power2.out', transformOrigin: 'left center' },
+              '>-0.02'
+            )
+          }
+        })
+
+        tl.fromTo(el.querySelectorAll('.arch-tag'),
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, stagger: 0.03, duration: 0.1 },
+          '>-0.04'
+        )
+      }
     }, el)
 
     return () => ctx.revert()
