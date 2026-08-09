@@ -488,8 +488,6 @@
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
   .ctp-cursor { animation: none; opacity: 0; }
-  .ctp-code-line { clip-path: none !important; }
-  .ctp-terminal { opacity: 1 !important; }
   .ctp-hero { opacity: 1 !important; }
   .ctp-hero-line,
   .ctp-hero-sub,

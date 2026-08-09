@@ -13,7 +13,6 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import GoToTop from './components/GoToTop'
 import { lenisRef } from './lenis'
-import { initSceneTransitions } from './lib/sceneTransitions'
 import './styles/global.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -45,8 +44,6 @@ export default function App() {
     }
     gsap.ticker.add(rafCallback)
     gsap.ticker.lagSmoothing(0)
-
-    initSceneTransitions()
 
     return () => {
       lenis.off('scroll', ScrollTrigger.update)
